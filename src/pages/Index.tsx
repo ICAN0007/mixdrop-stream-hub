@@ -23,7 +23,6 @@ const Index = () => {
               className="absolute inset-0 h-full w-full"
               allowFullScreen
               allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
               referrerPolicy="no-referrer"
               scrolling="no"
               frameBorder="0"
