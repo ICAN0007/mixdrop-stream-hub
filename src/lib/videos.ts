@@ -127,7 +127,7 @@ export const models = [
   "Eve Sweet",
   "Hazel Moore",
   "Katana Kombat",
-  "Kimmy",
+  "Kimmy Kimm",
   "Lexi Lore",
   "Lulu Chu",
   "Molly Little",
