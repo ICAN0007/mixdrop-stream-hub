@@ -137,6 +137,12 @@ export const models = [
   "Xxlayna Marie"
 ];
 
+export const modelCodes = [
+  ["AR", "AH", "CD", "CV", "EJ", "EE", "HR", "JJ", "KS", "LR", "LJ", "MM", "RK", "RR", "VB", "XL"],
+  ["AV", "BB", "CS", "DH", "EW", "ES", "HM", "KK", "KM", "LL", "LC", "ML", "RR", "SA", "VG"],
+  ["AL", "CC", "CL", "EI", "EM", "GD", "JL", "KK", "KR", "LB", "MM", "RL", "RM", "SB", "VM"],
+];
+
 export const filters = ["All", "Indian", "Foreign", "Trending", "Premium", "4K", "New", "Popular", "Models"];
 
 export function formatDuration(seconds: string): string {
