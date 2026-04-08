@@ -20,6 +20,36 @@ export const videos: Video[] = [
     duration: "600",
     addedAt: "2026-03-20T20:05:00Z",
   },
+  {
+    id: "V65",
+    title: "Exclusive Fashion Collection",
+    categories: ["Fashion"],
+    tags: ["#Fashion", "#Glamour", "#Premium"],
+    src: "//mixdrop.top/e/4dmqowvzfq3j9x4",
+    thumb: "",
+    duration: "1920",
+    addedAt: "2026-04-08T10:00:00Z",
+  },
+  {
+    id: "V66",
+    title: "Luxury Lifestyle Highlights",
+    categories: ["Lifestyle"],
+    tags: ["#Lifestyle", "#Luxury", "#Trending"],
+    src: "//mixdrop.top/e/l7qmv4rnsq1gr96",
+    thumb: "",
+    duration: "600",
+    addedAt: "2026-04-08T10:30:00Z",
+  },
+  {
+    id: "V67",
+    title: "Glamour & Style Showcase",
+    categories: ["Glamour"],
+    tags: ["#Glamour", "#Style", "#Fashion"],
+    src: "//mixdrop.top/e/gjkwm8ndfw4jmk8",
+    thumb: "",
+    duration: "600",
+    addedAt: "2026-04-08T11:00:00Z",
+  },
 ];
 
 export const categories = [
