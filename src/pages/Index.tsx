@@ -137,30 +137,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Video Grid */}
-          <section className="mt-10">
-            <h3 className="mb-5 text-lg font-bold text-foreground">More Videos</h3>
-            <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="group rounded-lg overflow-hidden border border-border bg-card hover:border-primary/40 transition-all duration-300 cursor-pointer hover-scale"
-                >
-                  <div className="relative aspect-video bg-muted overflow-hidden">
-                    <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-secondary to-muted group-hover:brightness-110 transition-all duration-300">
-                      <Play className="h-8 w-8 text-muted-foreground/40 group-hover:text-primary/60 transition-colors" />
-                    </div>
-                  </div>
-                  <div className="p-3">
-                    <p className="text-xs font-medium text-foreground line-clamp-2">
-                      Premium Collection #{i + 1}
-                    </p>
-                    <p className="mt-1 text-[10px] text-muted-foreground">10:00</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
 
           {/* Bottom Tabs */}
           <section className="mt-10">
