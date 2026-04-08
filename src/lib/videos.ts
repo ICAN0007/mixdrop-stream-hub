@@ -7,49 +7,54 @@ export interface Video {
   thumb: string;
   duration: string;
   addedAt: string;
+  model: string;
 }
 
 export const videos: Video[] = [
   {
-    id: "V64",
+    id: "V1",
     title: "YOUR NEW MIXDROP VIDEO TITLE (edit this)",
     categories: ["Fashion"],
     tags: ["#Fashion", "#Luxury", "#Travel"],
     src: "//mixdrop.top/e/ow98dk1gskvpgl",
-    thumb: "",
+    thumb: "https://files.catbox.moe/b0w6vy.jpg",
     duration: "600",
     addedAt: "2026-03-20T20:05:00Z",
+    model: "Emiri Momota"
   },
   {
-    id: "V65",
+    id: "V2",
     title: "Exclusive Fashion Collection",
     categories: ["Fashion"],
     tags: ["#Fashion", "#Glamour", "#Premium"],
     src: "//mixdrop.top/e/4dmqowvzfq3j9x4",
-    thumb: "",
+    thumb: "https://files.catbox.moe/nrkbjz.webp",
     duration: "1920",
     addedAt: "2026-04-08T10:00:00Z",
+    model: "Eliza Ibarra"
   },
   {
-    id: "V66",
-    title: "Luxury Lifestyle Highlights",
+    id: "V3",
+    title: "Jia Episode 1",
     categories: ["Lifestyle"],
     tags: ["#Lifestyle", "#Luxury", "#Trending"],
     src: "//mixdrop.top/e/l7qmv4rnsq1gr96",
-    thumb: "",
+    thumb: "https://files.catbox.moe/udf9lf.webp",
     duration: "600",
     addedAt: "2026-04-08T10:30:00Z",
+    model: "Jia Lissa"
   },
   {
-    id: "V67",
+    id: "V4",
     title: "Glamour & Style Showcase",
     categories: ["Glamour"],
     tags: ["#Glamour", "#Style", "#Fashion"],
     src: "//mixdrop.top/e/gjkwm8ndfw4jmk8",
-    thumb: "",
+    thumb: "https://files.catbox.moe/9pgr5p.webp",
     duration: "600",
     addedAt: "2026-04-08T11:00:00Z",
-  },
+    model: "Jia Lissa"
+  }
 ];
 
 export const categories = [
@@ -81,10 +86,55 @@ export const categories = [
   { count: 624, name: "Radiant Aura" },
 ];
 
-export const modelCodes = [
-  ["AR", "AH", "CD", "CV", "EJ", "EE", "HR", "JJ", "KS", "LR", "LJ", "MM", "RK", "RR", "VB", "XL"],
-  ["AV", "BB", "CS", "DH", "EW", "ES", "HM", "KK", "KM", "LL", "LC", "ML", "RR", "SA", "VG"],
-  ["AL", "CC", "CL", "EI", "EM", "GD", "JL", "KK", "KR", "LB", "MM", "RL", "RM", "SB", "VM"],
+export const models = [
+  "Adria Rae",
+  "Aria Lee",
+  "Chanel Camryn",
+  "Coco Lovelock",
+  "Eliza Ibarra",
+  "Emiri Momota",
+  "Gianna Dior",
+  "Jia Lissa",
+  "Katie Kush",
+  "Kylie Rocket",
+  "Lilly Bell",
+  "Megan Murkovski",
+  "Rae Lil Black",
+  "Rissa May",
+  "Scarlit Scandal",
+  "Violet Gems",
+  "Agatha Vega",
+  "Azul Hermosa",
+  "Cherie DeVille",
+  "Codi Vore",
+  "Elsa Jean",
+  "Eva Elfie",
+  "Hailey Rose",
+  "Julia James",
+  "Kendra Spade",
+  "Lana Rhoades",
+  "Liz Jordan",
+  "Melanie Marie",
+  "Rikako Katayama",
+  "Ryan Reid",
+  "Sonya Blaze",
+  "Violet Myers",
+  "Angel Gostosa",
+  "Bailey Base",
+  "Chloe Surreal",
+  "Demi Hawks",
+  "Emily Willis",
+  "Eve Sweet",
+  "Hazel Moore",
+  "Katana Kombat",
+  "Kimmy",
+  "Lexi Lore",
+  "Lulu Chu",
+  "Molly Little",
+  "Riley Reid",
+  "Scarlett Alexis",
+  "Vanna Bardot",
+  "Xxlayna Marie"
 ];
 
 export const filters = ["All", "Indian", "Foreign", "Trending", "Premium", "4K", "New", "Popular", "Models"];
