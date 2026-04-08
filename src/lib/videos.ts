@@ -13,7 +13,7 @@ export interface Video {
 export const videos: Video[] = [
   {
     id: "V1",
-    title: "YOUR NEW MIXDROP VIDEO TITLE (edit this)",
+    title: "F  me Until You Fill Me",
     categories: ["Fashion"],
     tags: ["#Fashion", "#Luxury", "#Travel"],
     src: "//mixdrop.top/e/ow98dk1gskvpgl",
@@ -24,7 +24,7 @@ export const videos: Video[] = [
   },
   {
     id: "V2",
-    title: "Exclusive Fashion Collection",
+    title: "Sx Sells Eliza Ibarra & Mick Blue",
     categories: ["Fashion"],
     tags: ["#Fashion", "#Glamour", "#Premium"],
     src: "//mixdrop.top/e/4dmqowvzfq3j9x4",
@@ -46,7 +46,7 @@ export const videos: Video[] = [
   },
   {
     id: "V4",
-    title: "Glamour & Style Showcase",
+    title: "The Most Beautiful Red Head You Have Ever Seen",
     categories: ["Glamour"],
     tags: ["#Glamour", "#Style", "#Fashion"],
     src: "//mixdrop.top/e/gjkwm8ndfw4jmk8",
