@@ -86,7 +86,7 @@ export const categories = [
   { count: 624, name: "Radiant Aura" },
 ];
 
-export const modelcodes = [
+export const modelCodes = [
   "Adria Rae",
   "Aria Lee",
   "Chanel Camryn",
@@ -137,9 +137,22 @@ export const modelcodes = [
   "Xxlayna Marie"
 ];
 
+export const modelcodes = modelCodes;
+
 
 
 export const filters = ["All", "Indian", "Foreign", "Trending", "Premium", "4K", "New", "Popular", "Models"];
+
+export function getVideoEmbedUrl(src: string): string {
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  if (src.startsWith("//")) return `https:${src}`;
+  return `https://${src.replace(/^\/+/, "")}`;
+}
+
+export function getVideoThumbnailUrl(thumb: string): string {
+  if (thumb.startsWith("//")) return `https:${thumb}`;
+  return thumb;
+}
 
 export function formatDuration(seconds: string): string {
   const s = parseInt(seconds, 10);

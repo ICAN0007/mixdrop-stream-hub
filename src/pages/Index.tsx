@@ -1,8 +1,15 @@
 import { useState } from "react";
-import { videos, categories, modelCodes, filters, formatDuration } from "@/lib/videos";
+import {
+  videos,
+  categories,
+  modelCodes,
+  filters,
+  formatDuration,
+  getVideoEmbedUrl,
+  getVideoThumbnailUrl,
+} from "@/lib/videos";
 import {
   Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark,
-  ChevronLeft, ChevronRight
 } from "lucide-react";
 
 const Index = () => {
@@ -75,10 +82,12 @@ const Index = () => {
         {/* Left: Featured + Grid */}
         <div className="flex-1 min-w-0">
           {/* Featured Video */}
-          <div className="rounded-xl overflow-hidden border border-border bg-card shadow-2xl shadow-black/50">
-            <div className="relative aspect-video bg-black">
+          <div className="rounded-xl overflow-hidden border border-border bg-card shadow-2xl shadow-primary/10">
+            <div className="relative aspect-video bg-secondary">
               <iframe
-                src={`https:${activeVideo.src}`}
+                key={activeVideo.id}
+                title={activeVideo.title}
+                src={getVideoEmbedUrl(activeVideo.src)}
                 className="absolute inset-0 h-full w-full"
                 allowFullScreen
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
@@ -136,6 +145,69 @@ const Index = () => {
               </p>
             </div>
           </div>
+
+          <section className="mt-8">
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <h3 className="text-sm font-bold tracking-wider text-foreground uppercase">
+                  Premium Collection
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  {videos.length} videos ready to watch
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              {videos.map((video) => {
+                const isActive = activeVideo.id === video.id;
+
+                return (
+                  <button
+                    key={video.id}
+                    onClick={() => {
+                      setActiveVideo(video);
+                      setLiked(false);
+                    }}
+                    className={`group rounded-xl border bg-card p-3 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 ${
+                      isActive ? "border-primary shadow-lg shadow-primary/10" : "border-border"
+                    }`}
+                    aria-pressed={isActive}
+                  >
+                    <div className="relative overflow-hidden rounded-lg border border-border bg-secondary">
+                      <div className="aspect-video">
+                        <img
+                          src={getVideoThumbnailUrl(video.thumb)}
+                          alt={`${video.title} thumbnail`}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
+                        />
+                      </div>
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 via-background/15 to-transparent" />
+                      <div className="absolute left-3 top-3 rounded-full bg-background/80 px-2.5 py-1 text-[10px] font-bold tracking-[0.2em] text-foreground backdrop-blur-sm">
+                        {video.id}
+                      </div>
+                      <div className="absolute right-3 top-3 rounded-full bg-background/80 px-2.5 py-1 text-[10px] font-semibold text-muted-foreground backdrop-blur-sm">
+                        {formatDuration(video.duration)}
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/70 text-foreground backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                          <Play className="h-5 w-5 fill-current" />
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mt-3 space-y-1.5">
+                      <h4 className="text-sm font-semibold leading-snug text-foreground">
+                        {video.title}
+                      </h4>
+                      <p className="text-xs text-muted-foreground">{video.model}</p>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
 
 
           {/* Bottom Tabs */}
@@ -229,19 +301,15 @@ const Index = () => {
             <h3 className="text-sm font-bold tracking-wider text-foreground mb-4 uppercase">
               Foreign → Models
             </h3>
-            <div className="space-y-2">
-              {modelCodes.map((row, ri) => (
-                <div key={ri} className="flex flex-wrap gap-1.5">
-                  {row.map((code, ci) => (
-                    <a
-                      key={`${ri}-${ci}`}
-                      href="#"
-                      className="px-2 py-1 text-[10px] font-semibold rounded bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                    >
-                      {code}
-                    </a>
-                  ))}
-                </div>
+            <div className="flex flex-wrap gap-1.5">
+              {modelCodes.map((model) => (
+                <a
+                  key={model}
+                  href="#"
+                  className="px-2 py-1 text-[10px] font-semibold rounded bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                >
+                  {model}
+                </a>
               ))}
             </div>
           </div>
