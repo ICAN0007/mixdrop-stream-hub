@@ -76,6 +76,8 @@ const Index = () => {
           <Search className="absolute left-4 h-5 w-5 text-muted-foreground" />
           <input
             type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search videos, models, categories..."
             className="w-full rounded-full bg-secondary border border-border pl-12 pr-12 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
           />
@@ -184,7 +186,7 @@ const Index = () => {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {videos.map((video) => {
+              {filteredVideos.map((video) => {
                 const isActive = activeVideo.id === video.id;
 
                 return (
@@ -306,7 +308,7 @@ const Index = () => {
               Categories
             </h3>
             <ul className="space-y-1.5">
-              {categories.map((cat) => (
+              {filteredCategories.map((cat) => (
                 <li key={cat.name}>
                   <a
                     href="#"
@@ -326,17 +328,19 @@ const Index = () => {
             <h3 className="text-sm font-bold tracking-wider text-foreground mb-4 uppercase">
               Foreign → Models
             </h3>
-            <div className="flex flex-wrap gap-1.5">
-              {modelCodes.map((model) => (
-                <a
-                  key={model}
-                  href="#"
-                  className="px-2 py-1 text-[10px] font-semibold rounded bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                >
-                  {model}
-                </a>
+            <ul className="space-y-1">
+              {filteredModels.map((model) => (
+                <li key={model}>
+                  <a
+                    href="#"
+                    className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors py-1"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-primary shrink-0" />
+                    {model}
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </aside>
       </div>
