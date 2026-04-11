@@ -307,20 +307,23 @@ const Index = () => {
             <h3 className="text-sm font-bold tracking-wider text-foreground mb-4 uppercase">
               Categories
             </h3>
-            <ul className="space-y-1.5">
+            <div className="grid grid-cols-2 gap-2">
               {filteredCategories.map((cat) => (
-                <li key={cat.name}>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors py-1 group"
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                    <span className="text-muted-foreground group-hover:text-foreground">{cat.count}</span>
-                    <span>{cat.name}</span>
-                  </a>
-                </li>
+                <a
+                  key={cat.name}
+                  href="#"
+                  className="group relative rounded-lg border border-border bg-card px-3 py-3 hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 overflow-hidden"
+                >
+                  <span className="block text-[11px] font-semibold text-foreground truncate group-hover:text-primary transition-colors">
+                    {cat.name}
+                  </span>
+                  <span className="block text-[10px] text-muted-foreground mt-0.5">
+                    {cat.count.toLocaleString()} videos
+                  </span>
+                  <span className="absolute top-2 right-2 h-1.5 w-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Models */}
