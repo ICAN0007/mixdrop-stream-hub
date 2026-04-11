@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   videos,
   categories,
@@ -18,6 +18,31 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("recent");
   const [currentPage, setCurrentPage] = useState(1);
   const [liked, setLiked] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredVideos = useMemo(() => {
+    if (!searchQuery.trim()) return videos;
+    const q = searchQuery.toLowerCase();
+    return videos.filter(
+      (v) =>
+        v.title.toLowerCase().includes(q) ||
+        v.model.toLowerCase().includes(q) ||
+        v.categories.some((c) => c.toLowerCase().includes(q)) ||
+        v.tags.some((t) => t.toLowerCase().includes(q))
+    );
+  }, [searchQuery]);
+
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery.trim()) return categories;
+    const q = searchQuery.toLowerCase();
+    return categories.filter((c) => c.name.toLowerCase().includes(q));
+  }, [searchQuery]);
+
+  const filteredModels = useMemo(() => {
+    if (!searchQuery.trim()) return modelCodes;
+    const q = searchQuery.toLowerCase();
+    return modelCodes.filter((m) => m.toLowerCase().includes(q));
+  }, [searchQuery]);
 
   return (
     <div className="min-h-screen">
