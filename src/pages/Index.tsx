@@ -328,19 +328,23 @@ const Index = () => {
             <h3 className="text-sm font-bold tracking-wider text-foreground mb-4 uppercase">
               Foreign → Models
             </h3>
-            <ul className="space-y-1">
-              {filteredModels.map((model) => (
-                <li key={model}>
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors py-1"
-                  >
-                    <span className="h-1 w-1 rounded-full bg-primary shrink-0" />
-                    {model}
-                  </a>
-                </li>
+            <div className="rounded-xl border border-border bg-card overflow-hidden">
+              {filteredModels.map((model, i) => (
+                <a
+                  key={model}
+                  href="#"
+                  className={`flex items-center gap-3 px-4 py-2.5 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all duration-200 group ${
+                    i !== filteredModels.length - 1 ? "border-b border-border/50" : ""
+                  }`}
+                >
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary text-[9px] font-bold shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-200">
+                    {model.split(" ").map(w => w[0]).join("")}
+                  </span>
+                  <span className="truncate">{model}</span>
+                  <span className="ml-auto text-[10px] text-muted-foreground/50 group-hover:text-primary/60">→</span>
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
         </aside>
       </div>
