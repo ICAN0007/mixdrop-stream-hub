@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import {
   videos,
   categories,
@@ -9,7 +9,7 @@ import {
   getVideoThumbnailUrl,
 } from "@/lib/videos";
 import {
-  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight,
+  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder,
 } from "lucide-react";
 
 const Index = () => {
@@ -20,6 +20,32 @@ const Index = () => {
   const [liked, setLiked] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  // Close search dropdown on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setSearchFocused(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return null;
+    const q = searchQuery.toLowerCase();
+    const matchedVideos = videos.filter(
+      (v) => v.title.toLowerCase().includes(q) || v.model.toLowerCase().includes(q)
+    ).slice(0, 5);
+    const matchedModels = modelCodes.filter((m) => m.toLowerCase().includes(q)).slice(0, 5);
+    const matchedCategories = categories.filter((c) => c.name.toLowerCase().includes(q)).slice(0, 5);
+    const allTags = [...new Set(videos.flatMap((v) => v.tags))];
+    const matchedTags = allTags.filter((t) => t.toLowerCase().includes(q)).slice(0, 5);
+    return { matchedVideos, matchedModels, matchedCategories, matchedTags };
+  }, [searchQuery]);
 
   const filteredVideos = useMemo(() => {
     let result = videos;
@@ -88,17 +114,138 @@ const Index = () => {
       </header>
 
       {/* Search */}
-      <div className="max-w-3xl mx-auto px-4 py-6">
-        <div className="relative flex items-center">
-          <Search className="absolute left-4 h-5 w-5 text-muted-foreground" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search videos, models, categories..."
-            className="w-full rounded-full bg-secondary border border-border pl-12 pr-12 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-          />
-          <Monitor className="absolute right-4 h-5 w-5 text-muted-foreground" />
+      <div className="max-w-3xl mx-auto px-4 py-6" ref={searchRef}>
+        <div className="relative">
+          <div className="relative flex items-center">
+            <Search className="absolute left-4 h-5 w-5 text-muted-foreground" />
+            <input
+              type="text"
+              value={searchQuery}
+              onFocus={() => setSearchFocused(true)}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search videos, models, categories..."
+              className="w-full rounded-full bg-secondary border border-border pl-12 pr-12 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+            />
+            <Monitor className="absolute right-4 h-5 w-5 text-muted-foreground" />
+          </div>
+
+          {/* Search Dropdown */}
+          {searchFocused && searchResults && (
+            <div className="absolute z-50 mt-2 w-full rounded-2xl border border-border bg-card shadow-2xl shadow-primary/10 overflow-hidden">
+              {/* Matched Videos */}
+              {searchResults.matchedVideos.length > 0 && (
+                <div className="p-3 border-b border-border">
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Film className="h-3 w-3" /> Videos
+                  </p>
+                  {searchResults.matchedVideos.map((v) => (
+                    <button
+                      key={v.id}
+                      onClick={() => {
+                        setActiveVideo(v);
+                        setLiked(false);
+                        setSearchFocused(false);
+                        setSearchQuery("");
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                      className="flex items-center gap-3 w-full px-2 py-2 rounded-lg hover:bg-primary/5 transition-colors text-left group"
+                    >
+                      <img
+                        src={getVideoThumbnailUrl(v.thumb)}
+                        alt={v.title}
+                        className="h-10 w-16 rounded object-cover shrink-0"
+                      />
+                      <div className="min-w-0">
+                        <p className="text-xs font-semibold text-foreground truncate group-hover:text-primary transition-colors">{v.title}</p>
+                        <p className="text-[10px] text-muted-foreground">{v.model} • {formatDuration(v.duration)}</p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Matched Models */}
+              {searchResults.matchedModels.length > 0 && (
+                <div className="p-3 border-b border-border">
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <User className="h-3 w-3" /> Models
+                  </p>
+                  {searchResults.matchedModels.map((m) => (
+                    <button
+                      key={m}
+                      onClick={() => {
+                        setSelectedModel(m);
+                        setSearchFocused(false);
+                        setSearchQuery("");
+                      }}
+                      className="flex items-center gap-2.5 w-full px-2 py-2 rounded-lg hover:bg-primary/5 transition-colors text-left group"
+                    >
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary text-[10px] font-bold shrink-0">
+                        {m.split(" ").map(w => w[0]).join("")}
+                      </span>
+                      <span className="text-xs text-foreground group-hover:text-primary transition-colors">{m}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Matched Categories */}
+              {searchResults.matchedCategories.length > 0 && (
+                <div className="p-3 border-b border-border">
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Folder className="h-3 w-3" /> Categories
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {searchResults.matchedCategories.map((c) => (
+                      <button
+                        key={c.name}
+                        onClick={() => {
+                          setSearchQuery(c.name);
+                          setSearchFocused(false);
+                        }}
+                        className="px-3 py-1.5 rounded-full bg-secondary text-[11px] font-medium text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                      >
+                        {c.name} <span className="text-muted-foreground/50">({c.count.toLocaleString()})</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Matched Tags */}
+              {searchResults.matchedTags.length > 0 && (
+                <div className="p-3">
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Tag className="h-3 w-3" /> Tags
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {searchResults.matchedTags.map((t) => (
+                      <button
+                        key={t}
+                        onClick={() => {
+                          setSearchQuery(t);
+                          setSearchFocused(false);
+                        }}
+                        className="px-3 py-1.5 rounded-full bg-primary/10 text-[11px] font-semibold text-primary hover:bg-primary/20 transition-colors"
+                      >
+                        {t}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* No results */}
+              {searchResults.matchedVideos.length === 0 &&
+                searchResults.matchedModels.length === 0 &&
+                searchResults.matchedCategories.length === 0 &&
+                searchResults.matchedTags.length === 0 && (
+                <div className="p-6 text-center text-sm text-muted-foreground">
+                  No results found for "{searchQuery}"
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
