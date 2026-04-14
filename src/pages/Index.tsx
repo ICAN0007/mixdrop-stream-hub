@@ -114,12 +114,14 @@ const Index = () => {
       </header>
 
       {/* Search */}
-      <div className="max-w-3xl mx-auto px-4 py-6">
-        <div className="relative flex items-center">
-          <Search className="absolute left-4 h-5 w-5 text-muted-foreground" />
-          <input
-            type="text"
-            value={searchQuery}
+      <div className="max-w-3xl mx-auto px-4 py-6" ref={searchRef}>
+        <div className="relative">
+          <div className="relative flex items-center">
+            <Search className="absolute left-4 h-5 w-5 text-muted-foreground" />
+            <input
+              type="text"
+              value={searchQuery}
+              onFocus={() => setSearchFocused(true)}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search videos, models, categories..."
             className="w-full rounded-full bg-secondary border border-border pl-12 pr-12 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
