@@ -19,18 +19,25 @@ const Index = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [liked, setLiked] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedModel, setSelectedModel] = useState<string | null>(null);
 
   const filteredVideos = useMemo(() => {
-    if (!searchQuery.trim()) return videos;
-    const q = searchQuery.toLowerCase();
-    return videos.filter(
-      (v) =>
-        v.title.toLowerCase().includes(q) ||
-        v.model.toLowerCase().includes(q) ||
-        v.categories.some((c) => c.toLowerCase().includes(q)) ||
-        v.tags.some((t) => t.toLowerCase().includes(q))
-    );
-  }, [searchQuery]);
+    let result = videos;
+    if (selectedModel) {
+      result = result.filter((v) => v.model === selectedModel);
+    }
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(
+        (v) =>
+          v.title.toLowerCase().includes(q) ||
+          v.model.toLowerCase().includes(q) ||
+          v.categories.some((c) => c.toLowerCase().includes(q)) ||
+          v.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    }
+    return result;
+  }, [searchQuery, selectedModel]);
 
   const filteredCategories = useMemo(() => {
     if (!searchQuery.trim()) return categories;
@@ -429,19 +436,38 @@ const Index = () => {
               Models
             </h3>
             <div className="space-y-1 max-h-[500px] overflow-y-auto pr-1 scrollbar-thin">
-              {filteredModels.map((model) => (
-                <a
-                  key={model}
-                  href="#"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-all duration-200 group"
+              {selectedModel && (
+                <button
+                  onClick={() => setSelectedModel(null)}
+                  className="mb-2 w-full text-[10px] font-semibold text-primary hover:text-primary/80 transition-colors text-left px-3"
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-primary/5 text-primary text-[10px] font-bold shrink-0 border border-primary/20 group-hover:from-primary group-hover:to-primary/80 group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
-                    {model.split(" ").map(w => w[0]).join("")}
-                  </span>
-                  <span className="truncate group-hover:text-foreground transition-colors">{model}</span>
-                  <ChevronRight className="h-3 w-3 ml-auto shrink-0 text-muted-foreground/30 group-hover:text-primary transition-colors" />
-                </a>
-              ))}
+                  ✕ Clear filter: {selectedModel}
+                </button>
+              )}
+              {filteredModels.map((model) => {
+                const isSelected = selectedModel === model;
+                return (
+                  <button
+                    key={model}
+                    onClick={() => setSelectedModel(isSelected ? null : model)}
+                    className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium w-full transition-all duration-200 group ${
+                      isSelected
+                        ? "bg-primary/10 text-primary border border-primary/30"
+                        : "text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                    }`}
+                  >
+                    <span className={`flex h-8 w-8 items-center justify-center rounded-full text-[10px] font-bold shrink-0 border transition-all duration-300 ${
+                      isSelected
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "bg-gradient-to-br from-primary/20 to-primary/5 text-primary border-primary/20 group-hover:from-primary group-hover:to-primary/80 group-hover:text-primary-foreground group-hover:border-primary"
+                    }`}>
+                      {model.split(" ").map(w => w[0]).join("")}
+                    </span>
+                    <span className="truncate transition-colors">{model}</span>
+                    <ChevronRight className="h-3 w-3 ml-auto shrink-0 text-muted-foreground/30 group-hover:text-primary transition-colors" />
+                  </button>
+                );
+              })}
             </div>
           </div>
         </aside>
