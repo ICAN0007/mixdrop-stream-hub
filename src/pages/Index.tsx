@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   videos,
   categories,
@@ -91,17 +92,21 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Header */}
       <header className="border-b border-border px-6 py-4 flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-black tracking-tight">
-            <span className="text-primary">Exclusive</span>
-            <span className="text-foreground">Clips4</span>
-          </h1>
-          <p className="text-xs text-muted-foreground tracking-widest uppercase mt-0.5">
-            Premium Fashion • Lifestyle • Glamour Videos
-          </p>
+        <div className="flex items-center gap-6">
+          <div>
+            <Link to="/" className="text-2xl font-black tracking-tight">
+              <span className="text-primary">Exclusive</span>
+              <span className="text-foreground">Clips4</span>
+            </Link>
+            <p className="text-xs text-muted-foreground tracking-widest uppercase mt-0.5">
+              Premium Fashion • Lifestyle • Glamour Videos
+            </p>
+          </div>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-          {["VIDEOS", "BEST OF", "COMMUNITY"].map((item) => (
+          <Link to="/" className="text-primary tracking-wide">HOME</Link>
+          <Link to="/models" className="hover:text-primary transition-colors duration-200 tracking-wide">MODELS</Link>
+          {["BEST OF", "COMMUNITY"].map((item) => (
             <a
               key={item}
               href="#"
