@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import {
   videos,
   categories,
@@ -9,7 +9,7 @@ import {
   getVideoThumbnailUrl,
 } from "@/lib/videos";
 import {
-  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight,
+  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder,
 } from "lucide-react";
 
 const Index = () => {
@@ -20,6 +20,32 @@ const Index = () => {
   const [liked, setLiked] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  // Close search dropdown on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setSearchFocused(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return null;
+    const q = searchQuery.toLowerCase();
+    const matchedVideos = videos.filter(
+      (v) => v.title.toLowerCase().includes(q) || v.model.toLowerCase().includes(q)
+    ).slice(0, 5);
+    const matchedModels = modelCodes.filter((m) => m.toLowerCase().includes(q)).slice(0, 5);
+    const matchedCategories = categories.filter((c) => c.name.toLowerCase().includes(q)).slice(0, 5);
+    const allTags = [...new Set(videos.flatMap((v) => v.tags))];
+    const matchedTags = allTags.filter((t) => t.toLowerCase().includes(q)).slice(0, 5);
+    return { matchedVideos, matchedModels, matchedCategories, matchedTags };
+  }, [searchQuery]);
 
   const filteredVideos = useMemo(() => {
     let result = videos;
