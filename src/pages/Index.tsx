@@ -53,6 +53,14 @@ const Index = () => {
     if (selectedModel) {
       result = result.filter((v) => v.model === selectedModel);
     }
+    if (activeFilter !== "All") {
+      const f = activeFilter.toLowerCase();
+      result = result.filter(
+        (v) =>
+          v.categories.some((c) => c.toLowerCase().includes(f)) ||
+          v.tags.some((t) => t.toLowerCase().includes(f))
+      );
+    }
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(
@@ -64,7 +72,7 @@ const Index = () => {
       );
     }
     return result;
-  }, [searchQuery, selectedModel]);
+  }, [searchQuery, selectedModel, activeFilter]);
 
   const filteredCategories = useMemo(() => {
     if (!searchQuery.trim()) return categories;
@@ -256,20 +264,30 @@ const Index = () => {
 
       {/* Filters */}
       <div className="max-w-5xl mx-auto px-4 pb-4">
-        <div className="flex flex-wrap gap-2">
-          {filters.map((f) => (
-            <button
-              key={f}
-              onClick={() => setActiveFilter(f)}
-              className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 ${
-                activeFilter === f
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
-                  : "bg-secondary text-secondary-foreground hover:bg-muted"
-              }`}
-            >
-              {f}
-            </button>
-          ))}
+        <div className="flex flex-wrap justify-center gap-2">
+          {filters.map((f) =>
+            f === "Models" ? (
+              <Link
+                key={f}
+                to="/models"
+                className="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 bg-secondary text-secondary-foreground hover:bg-muted"
+              >
+                {f}
+              </Link>
+            ) : (
+              <button
+                key={f}
+                onClick={() => setActiveFilter(f)}
+                className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 ${
+                  activeFilter === f
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
+                    : "bg-secondary text-secondary-foreground hover:bg-muted"
+                }`}
+              >
+                {f}
+              </button>
+            )
+          )}
         </div>
       </div>
 
