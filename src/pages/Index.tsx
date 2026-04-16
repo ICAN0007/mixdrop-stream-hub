@@ -19,6 +19,10 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("recent");
   const [currentPage, setCurrentPage] = useState(1);
   const [liked, setLiked] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [showComment, setShowComment] = useState(false);
+  const [commentText, setCommentText] = useState("");
+  const [comments, setComments] = useState<{ text: string; time: string }[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
   const [searchFocused, setSearchFocused] = useState(false);
