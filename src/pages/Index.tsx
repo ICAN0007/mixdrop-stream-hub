@@ -161,6 +161,9 @@ const Index = () => {
                       onClick={() => {
                         setActiveVideo(v);
                         setLiked(false);
+                        setSaved(false);
+                        setShowComment(false);
+                        setComments([]);
                         setSearchFocused(false);
                         setSearchQuery("");
                         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -464,6 +467,9 @@ const Index = () => {
                     onClick={() => {
                       setActiveVideo(video);
                       setLiked(false);
+                      setSaved(false);
+                      setShowComment(false);
+                      setComments([]);
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     className="group flex gap-3 rounded-xl border border-border bg-card p-2.5 text-left hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
@@ -531,6 +537,9 @@ const Index = () => {
                     onClick={() => {
                       setActiveVideo(video);
                       setLiked(false);
+                      setSaved(false);
+                      setShowComment(false);
+                      setComments([]);
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     className={`group rounded-2xl border bg-card text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 overflow-hidden ${
