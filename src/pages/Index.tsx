@@ -19,6 +19,10 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("recent");
   const [currentPage, setCurrentPage] = useState(1);
   const [liked, setLiked] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [showComment, setShowComment] = useState(false);
+  const [commentText, setCommentText] = useState("");
+  const [comments, setComments] = useState<{ text: string; time: string }[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
   const [searchFocused, setSearchFocused] = useState(false);
@@ -157,6 +161,9 @@ const Index = () => {
                       onClick={() => {
                         setActiveVideo(v);
                         setLiked(false);
+                        setSaved(false);
+                        setShowComment(false);
+                        setComments([]);
                         setSearchFocused(false);
                         setSearchQuery("");
                         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -318,7 +325,15 @@ const Index = () => {
                     {activeVideo.title}
                   </h2>
                   <div className="flex items-center gap-3">
-                    <span className="text-xs font-semibold text-primary">{activeVideo.model}</span>
+                    <button
+                      onClick={() => {
+                        setSelectedModel(activeVideo.model);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                      className="text-xs font-semibold text-primary hover:underline cursor-pointer"
+                    >
+                      {activeVideo.model}
+                    </button>
                     <span className="text-muted-foreground/30">•</span>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
@@ -331,23 +346,42 @@ const Index = () => {
               {activeVideo.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {activeVideo.tags.map((tag) => (
-                    <span
+                    <button
                       key={tag}
-                      className="px-2.5 py-1 rounded-full bg-primary/10 text-[10px] text-primary font-semibold tracking-wide"
+                      onClick={() => {
+                        setSearchQuery(tag);
+                        setSearchFocused(false);
+                      }}
+                      className="px-2.5 py-1 rounded-full bg-primary/10 text-[10px] text-primary font-semibold tracking-wide hover:bg-primary/20 transition-colors cursor-pointer"
                     >
                       {tag}
-                    </span>
+                    </button>
                   ))}
                 </div>
               )}
 
               {/* Actions */}
               <div className="flex items-center gap-3 pt-3 border-t border-border">
-                <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-xs text-muted-foreground hover:text-foreground hover:bg-muted transition-all">
-                  <Bookmark className="h-3.5 w-3.5" /> Save
+                <button
+                  onClick={() => setSaved(!saved)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs transition-all duration-300 ${
+                    saved
+                      ? "bg-primary/20 text-primary"
+                      : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}
+                >
+                  <Bookmark className={`h-3.5 w-3.5 transition-all ${saved ? "fill-primary" : ""}`} />
+                  {saved ? "Saved" : "Save"}
                 </button>
-                <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-xs text-muted-foreground hover:text-foreground hover:bg-muted transition-all">
-                  <MessageSquare className="h-3.5 w-3.5" /> Comment
+                <button
+                  onClick={() => setShowComment(!showComment)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs transition-all duration-300 ${
+                    showComment
+                      ? "bg-primary/20 text-primary"
+                      : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}
+                >
+                  <MessageSquare className="h-3.5 w-3.5" /> Comment {comments.length > 0 && `(${comments.length})`}
                 </button>
                 <button
                   onClick={() => setLiked(!liked)}
@@ -361,6 +395,59 @@ const Index = () => {
                   {liked ? "Liked" : "Like"}
                 </button>
               </div>
+
+              {/* Comment Section */}
+              {showComment && (
+                <div className="space-y-3 pt-2">
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={commentText}
+                      onChange={(e) => setCommentText(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" && commentText.trim()) {
+                          setComments((prev) => [
+                            { text: commentText.trim(), time: new Date().toLocaleTimeString() },
+                            ...prev,
+                          ]);
+                          setCommentText("");
+                        }
+                      }}
+                      placeholder="Write a comment..."
+                      className="flex-1 rounded-full bg-secondary border border-border px-4 py-2 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    />
+                    <button
+                      onClick={() => {
+                        if (commentText.trim()) {
+                          setComments((prev) => [
+                            { text: commentText.trim(), time: new Date().toLocaleTimeString() },
+                            ...prev,
+                          ]);
+                          setCommentText("");
+                        }
+                      }}
+                      className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                      Post
+                    </button>
+                  </div>
+                  {comments.length > 0 && (
+                    <div className="space-y-2 max-h-40 overflow-y-auto">
+                      {comments.map((c, i) => (
+                        <div key={i} className="flex items-start gap-2 px-2 py-1.5 rounded-lg bg-secondary/50">
+                          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary text-[9px] font-bold shrink-0">
+                            U
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-xs text-foreground">{c.text}</p>
+                            <p className="text-[9px] text-muted-foreground">{c.time}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 
@@ -380,6 +467,9 @@ const Index = () => {
                     onClick={() => {
                       setActiveVideo(video);
                       setLiked(false);
+                      setSaved(false);
+                      setShowComment(false);
+                      setComments([]);
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     className="group flex gap-3 rounded-xl border border-border bg-card p-2.5 text-left hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
@@ -447,6 +537,9 @@ const Index = () => {
                     onClick={() => {
                       setActiveVideo(video);
                       setLiked(false);
+                      setSaved(false);
+                      setShowComment(false);
+                      setComments([]);
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     className={`group rounded-2xl border bg-card text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 overflow-hidden ${
