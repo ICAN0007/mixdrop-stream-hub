@@ -10,7 +10,7 @@ import {
   getVideoThumbnailUrl,
 } from "@/lib/videos";
 import {
-  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder,
+  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder, X,
 } from "lucide-react";
 
 const Index = () => {
@@ -25,8 +25,16 @@ const Index = () => {
   const [comments, setComments] = useState<{ text: string; time: string }[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchFocused, setSearchFocused] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const collectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollToCollection = () => {
+    setTimeout(() => {
+      collectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
 
   // Close search dropdown on outside click
   useEffect(() => {
