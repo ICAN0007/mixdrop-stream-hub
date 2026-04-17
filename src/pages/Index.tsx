@@ -336,7 +336,8 @@ const Index = () => {
                     <button
                       onClick={() => {
                         setSelectedModel(activeVideo.model);
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        setSelectedTag(null);
+                        scrollToCollection();
                       }}
                       className="text-xs font-semibold text-primary hover:underline cursor-pointer"
                     >
@@ -357,8 +358,9 @@ const Index = () => {
                     <button
                       key={tag}
                       onClick={() => {
-                        setSearchQuery(tag);
-                        setSearchFocused(false);
+                        setSelectedTag(tag);
+                        setSelectedModel(null);
+                        scrollToCollection();
                       }}
                       className="px-2.5 py-1 rounded-full bg-primary/10 text-[10px] text-primary font-semibold tracking-wide hover:bg-primary/20 transition-colors cursor-pointer"
                     >
