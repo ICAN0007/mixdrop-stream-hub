@@ -10,7 +10,7 @@ import {
   getVideoThumbnailUrl,
 } from "@/lib/videos";
 import {
-  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder,
+  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder, X,
 } from "lucide-react";
 
 const Index = () => {
@@ -25,8 +25,16 @@ const Index = () => {
   const [comments, setComments] = useState<{ text: string; time: string }[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchFocused, setSearchFocused] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const collectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollToCollection = () => {
+    setTimeout(() => {
+      collectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  };
 
   // Close search dropdown on outside click
   useEffect(() => {
@@ -57,6 +65,9 @@ const Index = () => {
     if (selectedModel) {
       result = result.filter((v) => v.model === selectedModel);
     }
+    if (selectedTag) {
+      result = result.filter((v) => v.tags.includes(selectedTag));
+    }
     if (activeFilter !== "All") {
       const f = activeFilter.toLowerCase();
       result = result.filter(
@@ -76,7 +87,7 @@ const Index = () => {
       );
     }
     return result;
-  }, [searchQuery, selectedModel, activeFilter]);
+  }, [searchQuery, selectedModel, selectedTag, activeFilter]);
 
   const filteredCategories = useMemo(() => {
     if (!searchQuery.trim()) return categories;
@@ -90,13 +101,10 @@ const Index = () => {
     return modelCodes.filter((m) => m.toLowerCase().includes(q));
   }, [searchQuery]);
 
-  // Recommended videos: same model or same category, excluding current
+  // Recommended videos: ONLY same model, excluding current
   const recommendedVideos = useMemo(() => {
     return videos.filter(
-      (v) =>
-        v.id !== activeVideo.id &&
-        (v.model === activeVideo.model ||
-          v.categories.some((c) => activeVideo.categories.includes(c)))
+      (v) => v.id !== activeVideo.id && v.model === activeVideo.model
     );
   }, [activeVideo]);
 
@@ -195,8 +203,10 @@ const Index = () => {
                       key={m}
                       onClick={() => {
                         setSelectedModel(m);
+                        setSelectedTag(null);
                         setSearchFocused(false);
                         setSearchQuery("");
+                        scrollToCollection();
                       }}
                       className="flex items-center gap-2.5 w-full px-2 py-2 rounded-lg hover:bg-primary/5 transition-colors text-left group"
                     >
@@ -328,7 +338,8 @@ const Index = () => {
                     <button
                       onClick={() => {
                         setSelectedModel(activeVideo.model);
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        setSelectedTag(null);
+                        scrollToCollection();
                       }}
                       className="text-xs font-semibold text-primary hover:underline cursor-pointer"
                     >
@@ -349,8 +360,9 @@ const Index = () => {
                     <button
                       key={tag}
                       onClick={() => {
-                        setSearchQuery(tag);
-                        setSearchFocused(false);
+                        setSelectedTag(tag);
+                        setSelectedModel(null);
+                        scrollToCollection();
                       }}
                       className="px-2.5 py-1 rounded-full bg-primary/10 text-[10px] text-primary font-semibold tracking-wide hover:bg-primary/20 transition-colors cursor-pointer"
                     >
@@ -512,7 +524,28 @@ const Index = () => {
           )}
 
           {/* Premium Collection */}
-          <section className="mt-8">
+          <section ref={collectionRef} className="mt-8 scroll-mt-4">
+            {(selectedModel || selectedTag) && (
+              <div className="mb-4 flex items-center justify-between gap-3 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground shrink-0">
+                    Filtered by
+                  </span>
+                  <span className="text-sm font-bold text-primary truncate">
+                    {selectedModel ?? selectedTag}
+                  </span>
+                </div>
+                <button
+                  onClick={() => {
+                    setSelectedModel(null);
+                    setSelectedTag(null);
+                  }}
+                  className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold text-primary hover:bg-primary/20 transition-colors shrink-0"
+                >
+                  <X className="h-3 w-3" /> Clear
+                </button>
+              </div>
+            )}
             <div className="mb-4 flex items-center justify-between gap-3">
               <div className="flex items-center gap-2">
                 <Eye className="h-4 w-4 text-primary" />
@@ -712,7 +745,14 @@ const Index = () => {
                 return (
                   <button
                     key={model}
-                    onClick={() => setSelectedModel(isSelected ? null : model)}
+                    onClick={() => {
+                      const next = isSelected ? null : model;
+                      setSelectedModel(next);
+                      if (next) {
+                        setSelectedTag(null);
+                        scrollToCollection();
+                      }
+                    }}
                     className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium w-full transition-all duration-200 group ${
                       isSelected
                         ? "bg-primary/10 text-primary border border-primary/30"
