@@ -522,7 +522,28 @@ const Index = () => {
           )}
 
           {/* Premium Collection */}
-          <section className="mt-8">
+          <section ref={collectionRef} className="mt-8 scroll-mt-4">
+            {(selectedModel || selectedTag) && (
+              <div className="mb-4 flex items-center justify-between gap-3 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground shrink-0">
+                    Filtered by
+                  </span>
+                  <span className="text-sm font-bold text-primary truncate">
+                    {selectedModel ?? selectedTag}
+                  </span>
+                </div>
+                <button
+                  onClick={() => {
+                    setSelectedModel(null);
+                    setSelectedTag(null);
+                  }}
+                  className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold text-primary hover:bg-primary/20 transition-colors shrink-0"
+                >
+                  <X className="h-3 w-3" /> Clear
+                </button>
+              </div>
+            )}
             <div className="mb-4 flex items-center justify-between gap-3">
               <div className="flex items-center gap-2">
                 <Eye className="h-4 w-4 text-primary" />
