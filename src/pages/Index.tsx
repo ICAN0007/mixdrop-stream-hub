@@ -65,6 +65,9 @@ const Index = () => {
     if (selectedModel) {
       result = result.filter((v) => v.model === selectedModel);
     }
+    if (selectedTag) {
+      result = result.filter((v) => v.tags.includes(selectedTag));
+    }
     if (activeFilter !== "All") {
       const f = activeFilter.toLowerCase();
       result = result.filter(
@@ -84,7 +87,7 @@ const Index = () => {
       );
     }
     return result;
-  }, [searchQuery, selectedModel, activeFilter]);
+  }, [searchQuery, selectedModel, selectedTag, activeFilter]);
 
   const filteredCategories = useMemo(() => {
     if (!searchQuery.trim()) return categories;
@@ -98,13 +101,10 @@ const Index = () => {
     return modelCodes.filter((m) => m.toLowerCase().includes(q));
   }, [searchQuery]);
 
-  // Recommended videos: same model or same category, excluding current
+  // Recommended videos: ONLY same model, excluding current
   const recommendedVideos = useMemo(() => {
     return videos.filter(
-      (v) =>
-        v.id !== activeVideo.id &&
-        (v.model === activeVideo.model ||
-          v.categories.some((c) => activeVideo.categories.includes(c)))
+      (v) => v.id !== activeVideo.id && v.model === activeVideo.model
     );
   }, [activeVideo]);
 
