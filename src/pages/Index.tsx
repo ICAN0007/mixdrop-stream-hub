@@ -203,8 +203,10 @@ const Index = () => {
                       key={m}
                       onClick={() => {
                         setSelectedModel(m);
+                        setSelectedTag(null);
                         setSearchFocused(false);
                         setSearchQuery("");
+                        scrollToCollection();
                       }}
                       className="flex items-center gap-2.5 w-full px-2 py-2 rounded-lg hover:bg-primary/5 transition-colors text-left group"
                     >
@@ -743,7 +745,14 @@ const Index = () => {
                 return (
                   <button
                     key={model}
-                    onClick={() => setSelectedModel(isSelected ? null : model)}
+                    onClick={() => {
+                      const next = isSelected ? null : model;
+                      setSelectedModel(next);
+                      if (next) {
+                        setSelectedTag(null);
+                        scrollToCollection();
+                      }
+                    }}
                     className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-medium w-full transition-all duration-200 group ${
                       isSelected
                         ? "bg-primary/10 text-primary border border-primary/30"
