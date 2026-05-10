@@ -54,7 +54,106 @@ export const videos: Video[] = [
     duration: "600",
     addedAt: "2026-04-08T11:00:00Z",
     model: "Jia Lissa"
-  }
+  },
+  {
+  id: "V5",
+  title: "Part 2",
+  categories: ["Lifestyle"],
+  tags: ["#Lifestyle", "#Luxury", "#Trending"],
+  src: "//mxdrop.sx/f/vk7zqzdrh1zno3",
+  thumb: "https://files.catbox.moe/pc941o.webp",
+  duration: "600",
+  addedAt: "2026-04-08T11:30:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V6",
+  title: "Part 3",
+  categories: ["Lifestyle"],
+  tags: ["#Lifestyle", "#Luxury", "#Trending"],
+  src: "//mxdrop.sx/f/gj0kdkqwaed3g7",
+  thumb: "https://files.catbox.moe/601wti.webp",
+  duration: "600",
+  addedAt: "2026-04-08T12:00:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V7",
+  title: "BLAcked",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Premium", "#Trending"],
+  src: "//mxdrop.sx/f/7k9pjpmet784q3",
+  thumb: "https://files.catbox.moe/qk12ta.webp",
+  duration: "1920",
+  addedAt: "2026-04-08T12:30:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V8",
+  title: "C Crazy Rae Handles Two BB",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Luxury", "#Premium"],
+  src: "//mxdrop.sx/f/7k9pjples77nd6",
+  thumb: "https://files.catbox.moe/20ax4i.webp",
+  duration: "1920",
+  addedAt: "2026-04-08T13:00:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V9",
+  title: "24",
+  categories: ["Lifestyle"],
+  tags: ["#Lifestyle", "#Trending", "#Luxury"],
+  src: "//mxdrop.sx/f/l7nq9q09fl99lr",
+  thumb: "https://files.catbox.moe/s2a1f3.webp",
+  duration: "600",
+  addedAt: "2026-04-08T13:30:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V10",
+  title: "Naughty Beauty Rae Seduces BFFs Man",
+  categories: ["Fashion"],
+  tags: ["#Fashion", "#Glamour", "#Premium"],
+  src: "//mxdrop.sx/f/9w1qxqews0j398",
+  thumb: "https://files.catbox.moe/hpm13y.webp",
+  duration: "1920",
+  addedAt: "2026-04-08T14:00:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V11",
+  title: "Perfect Babe Rae Cant Resist Jasons BBC",
+  categories: ["Fashion"],
+  tags: ["#Fashion", "#Luxury", "#Trending"],
+  src: "//mxdrop.sx/f/dk3dr3nwf1em7v",
+  thumb: "https://files.catbox.moe/nrjlss.webp",
+  duration: "1920",
+  addedAt: "2026-04-08T14:30:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V12",
+  title: "Wild Temptation",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Style", "#Premium"],
+  src: "//mxdrop.sx/f/gj0kd09pcjzkp8",
+  thumb: "https://files.catbox.moe/bdjagp.webp",
+  duration: "600",
+  addedAt: "2026-04-08T15:00:00Z",
+  model: "Rae Lil Black"
+},
+{
+  id: "V13",
+  title: "Lust At First Sight",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Luxury", "#Trending"],
+  src: "//mxdrop.sx/f/wlkmwnx7a0o3m9",
+  thumb: "https://files.catbox.moe/x868xi.webp",
+  duration: "600",
+  addedAt: "2026-04-08T15:30:00Z",
+  model: "Rae Lil Black"
+}
 ];
 
 export const categories = [
