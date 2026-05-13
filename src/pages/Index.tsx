@@ -560,7 +560,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 2xl:grid-cols-3">
+            <div className="grid gap-6 grid-cols-1">
               {filteredVideos.map((video) => {
                 const isActive = activeVideo.id === video.id;
 
