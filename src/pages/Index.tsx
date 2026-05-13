@@ -560,7 +560,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 2xl:grid-cols-3">
+            <div className="grid gap-6 grid-cols-1">
               {filteredVideos.map((video) => {
                 const isActive = activeVideo.id === video.id;
 
@@ -583,7 +583,7 @@ const Index = () => {
                     aria-pressed={isActive}
                   >
                     <div className="relative overflow-hidden bg-secondary">
-                      <div className="aspect-video">
+                      <div className="aspect-[16/10]">
                         <img
                           src={getVideoThumbnailUrl(video.thumb)}
                           alt={`${video.title} thumbnail`}
