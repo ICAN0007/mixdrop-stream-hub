@@ -583,7 +583,7 @@ const Index = () => {
                     aria-pressed={isActive}
                   >
                     <div className="relative overflow-hidden bg-secondary">
-                      <div className="aspect-video">
+                      <div className="aspect-[16/10]">
                         <img
                           src={getVideoThumbnailUrl(video.thumb)}
                           alt={`${video.title} thumbnail`}
