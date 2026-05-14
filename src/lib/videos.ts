@@ -42,7 +42,7 @@ export const videos: Video[] = [
     thumb: "https://files.catbox.moe/udf9lf.webp",
     duration: "600",
     addedAt: "2026-04-08T10:30:00Z",
-    model: "Jia Lissa"
+    model: "Jia Lissa, Agatha Vega"
   },
   {
     id: "V4",
