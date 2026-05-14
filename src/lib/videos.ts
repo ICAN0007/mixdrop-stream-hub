@@ -61,7 +61,7 @@ export const videos: Video[] = [
   categories: ["Lifestyle"],
   tags: ["#Lifestyle", "#Trending", "#Luxury"],
   src: "//mxdrop.sx/e/l7nq9q09fl99lr",
-  thumb: "https://ibb.co/wVSzbgF",
+  thumb: "https://i.ibb.co/Dh9R6WH/24-Hours.webp",
   duration: "600",
   addedAt: "2026-04-08T11:30:00Z",
   model: "Rae Lil Black"
