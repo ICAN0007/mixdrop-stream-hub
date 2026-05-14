@@ -153,7 +153,18 @@ export const videos: Video[] = [
   duration: "600",
   addedAt: "2026-04-08T15:30:00Z",
   model: "Rae Lil Black"
-}
+},
+{
+  id: "V13",
+  title: "Y2K photo shoot with a beauty.",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Luxury", "#Trending"],
+  src: "https://video.damplips.com/video7/714/63.mp4",
+  thumb: "https://files.catbox.moe/x08jwt.jpg",
+  duration: "600",
+  addedAt: "2026-04-08T15:30:00Z",
+  model: ""
+}  
 ];
 
 export const categories = [
@@ -208,6 +219,7 @@ export const modelCodes = [
   "Codi Vore",
   "Elsa Jean",
   "Eva Elfie",
+  "Elly Clutch",
   "Hailey Rose",
   "Julia James",
   "Kendra Spade",
