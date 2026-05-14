@@ -72,7 +72,7 @@ export const videos: Video[] = [
   categories: ["Lifestyle"],
   tags: ["#Lifestyle", "#Luxury", "#Trending"],
   src: "//mxdrop.sx/e/vk7zqzdrh1zno3",
-  thumb: "https://files.catbox.moe/pc941o.webp",
+  thumb: "https://i.ibb.co/4nz8G56m/24-Hours-Part-2.webp",
   duration: "600",
   addedAt: "2026-04-08T12:00:00Z",
   model: "Rae Lil Black"
@@ -83,7 +83,7 @@ export const videos: Video[] = [
   categories: ["Lifestyle"],
   tags: ["#Lifestyle", "#Luxury", "#Trending"],
   src: "//mxdrop.sx/e/gj0kdkqwaed3g7",
-  thumb: "https://files.catbox.moe/yjuiqd.jpg",
+  thumb: "https://i.ibb.co/S75FsXMC/24-Hours-Part-3.webp",
   duration: "600",
   addedAt: "2026-04-08T12:30:00Z",
   model: "Rae Lil Black"
@@ -94,7 +94,8 @@ export const videos: Video[] = [
   categories: ["Glamour"],
   tags: ["#Glamour", "#Premium", "#Trending"],
   src: "//mxdrop.sx/e/7k9pjpmet784q3",
-  thumb: "https://files.catbox.moe/qk12ta.webp",
+  thumb: "https://i.ibb.co/4w7MWcFW/Rae-lil-black-in-first.webp
+",
   duration: "1920",
   addedAt: "2026-04-08T13:00:00Z",
   model: "Rae Lil Black"
@@ -105,7 +106,7 @@ export const videos: Video[] = [
   categories: ["Glamour"],
   tags: ["#Glamour", "#Luxury", "#Premium"],
   src: "//mxdrop.sx/e/7k9pjples77nd6",
-  thumb: "https://files.catbox.moe/20ax4i.webp",
+  thumb: "https://i.ibb.co/Wvs1J9sz/C-Crazy-Rae-Handles.webp",
   duration: "1920",
   addedAt: "2026-04-08T13:30:00Z",
   model: "Rae Lil Black"
@@ -116,7 +117,7 @@ export const videos: Video[] = [
   categories: ["Fashion"],
   tags: ["#Fashion", "#Glamour", "#Premium"],
   src: "//mxdrop.sx/e/9w1qxqews0j398",
-  thumb: "https://files.catbox.moe/hpm13y.webp",
+  thumb: "https://i.ibb.co/C5FcsTFP/Beauty-Rae.webp",
   duration: "1920",
   addedAt: "2026-04-08T14:00:00Z",
   model: "Rae Lil Black"
@@ -127,7 +128,8 @@ export const videos: Video[] = [
   categories: ["Fashion"],
   tags: ["#Fashion", "#Luxury", "#Trending"],
   src: "//mxdrop.sx/e/dk3dr3nwf1em7v",
-  thumb: "https://files.catbox.moe/nrjlss.webp",
+  thumb: "https://i.ibb.co/DPnRXFHM/Perfect-Babe-Rae-Cant-Resist.webp
+",
   duration: "1920",
   addedAt: "2026-04-08T14:30:00Z",
   model: "Rae Lil Black"
@@ -138,7 +140,7 @@ export const videos: Video[] = [
   categories: ["Glamour"],
   tags: ["#Glamour", "#Style", "#Premium"],
   src: "//mxdrop.sx/e/gj0kd09pcjzkp8",
-  thumb: "https://files.catbox.moe/bdjagp.webp",
+  thumb: "https://i.ibb.co/bjkYSzT6/Wild-Temptation.webp",
   duration: "600",
   addedAt: "2026-04-08T15:00:00Z",
   model: "Rae Lil Black"
@@ -149,7 +151,7 @@ export const videos: Video[] = [
   categories: ["Glamour"],
   tags: ["#Glamour", "#Luxury", "#Trending"],
   src: "//mxdrop.sx/e/wlkmwnx7a0o3m9",
-  thumb: "https://files.catbox.moe/x868xi.webp",
+  thumb: "https://i.ibb.co/3Y7qWQ2m/L-At-First-Sight.webp",
   duration: "600",
   addedAt: "2026-04-08T15:30:00Z",
   model: "Rae Lil Black"
