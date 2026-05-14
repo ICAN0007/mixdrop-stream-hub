@@ -112,19 +112,18 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="border-b border-border px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <div>
-            <Link to="/" className="text-2xl font-black tracking-tight">
-              <span className="text-primary">Exclusive</span>
-              <span className="text-foreground">Clips4</span>
-            </Link>
-            <p className="text-xs text-muted-foreground tracking-widest uppercase mt-0.5">
-              Premium Fashion • Lifestyle • Glamour Videos
-            </p>
-          </div>
+      <header className="border-b border-border px-6 py-4 grid grid-cols-3 items-center">
+        <div />
+        <div className="text-center">
+          <Link to="/" className="text-2xl font-black tracking-tight">
+            <span className="text-primary">Exclusive</span>
+            <span className="text-foreground">Clips4</span>
+          </Link>
+          <p className="text-xs text-muted-foreground tracking-widest uppercase mt-0.5">
+            Premium Fashion • Lifestyle • Glamour Videos
+          </p>
         </div>
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+        <nav className="hidden md:flex items-center justify-end gap-6 text-sm font-medium text-muted-foreground">
           <Link to="/" className="text-primary tracking-wide">HOME</Link>
           <Link to="/models" className="hover:text-primary transition-colors duration-200 tracking-wide">MODELS</Link>
           {["BEST OF", "COMMUNITY"].map((item) => (
