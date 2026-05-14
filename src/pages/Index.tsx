@@ -122,6 +122,7 @@ const Index = () => {
               Premium Fashion • Lifestyle • Glamour Videos
             </p>
           </div>
+          <span className="text-sm font-bold text-primary uppercase tracking-wider">sup</span>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
           <Link to="/" className="text-primary tracking-wide">HOME</Link>
