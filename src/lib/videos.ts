@@ -163,7 +163,7 @@ export const videos: Video[] = [
   thumb: "https://files.catbox.moe/x08jwt.jpg",
   duration: "600",
   addedAt: "2026-04-08T15:30:00Z",
-  model: ""
+  model: "Elly Clutch"
 }  
 ];
 
