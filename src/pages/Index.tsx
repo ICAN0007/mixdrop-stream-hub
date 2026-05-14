@@ -109,6 +109,22 @@ const Index = () => {
     );
   }, [activeVideo]);
 
+  const VIDEOS_PER_PAGE = 10;
+  const totalPages = Math.max(1, Math.ceil(filteredVideos.length / VIDEOS_PER_PAGE));
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedModel, selectedTag, activeFilter]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(1);
+  }, [currentPage, totalPages]);
+
+  const paginatedVideos = useMemo(() => {
+    const start = (currentPage - 1) * VIDEOS_PER_PAGE;
+    return filteredVideos.slice(start, start + VIDEOS_PER_PAGE);
+  }, [filteredVideos, currentPage]);
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -571,7 +587,7 @@ const Index = () => {
             </div>
 
             <div className="grid gap-6 grid-cols-1">
-              {filteredVideos.map((video) => {
+              {paginatedVideos.map((video) => {
                 const isActive = activeVideo.id === video.id;
 
                 return (
@@ -679,33 +695,47 @@ const Index = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-1 pb-8 text-xs">
-            <span className="text-muted-foreground mr-2 font-semibold">PAGES</span>
-            {[1, 2, 3, 4, 5].map((p) => (
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-1 pb-8 text-xs flex-wrap">
+              <span className="text-muted-foreground mr-2 font-semibold">PAGES</span>
               <button
-                key={p}
-                onClick={() => setCurrentPage(p)}
-                className={`h-8 w-8 rounded-lg flex items-center justify-center font-medium transition-all ${
-                  currentPage === p
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                }`}
+                onClick={() => {
+                  setCurrentPage((p) => Math.max(1, p - 1));
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                disabled={currentPage === 1}
+                className="h-8 px-3 rounded-lg flex items-center justify-center font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary disabled:opacity-40 disabled:hover:bg-transparent"
               >
-                {p}
+                Prev
               </button>
-            ))}
-            <span className="text-muted-foreground mx-1">…</span>
-            <button
-              onClick={() => setCurrentPage(50)}
-              className={`h-8 w-8 rounded-lg flex items-center justify-center font-medium transition-all ${
-                currentPage === 50
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              }`}
-            >
-              50
-            </button>
-          </div>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                <button
+                  key={p}
+                  onClick={() => {
+                    setCurrentPage(p);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className={`h-8 w-8 rounded-lg flex items-center justify-center font-medium transition-all ${
+                    currentPage === p
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  {p}
+                </button>
+              ))}
+              <button
+                onClick={() => {
+                  setCurrentPage((p) => Math.min(totalPages, p + 1));
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                disabled={currentPage === totalPages}
+                className="h-8 px-3 rounded-lg flex items-center justify-center font-medium transition-all text-muted-foreground hover:text-foreground hover:bg-secondary disabled:opacity-40 disabled:hover:bg-transparent"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Right Sidebar */}
