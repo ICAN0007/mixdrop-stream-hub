@@ -19,6 +19,7 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("recent");
   const [currentPage, setCurrentPage] = useState(1);
   const [liked, setLiked] = useState(false);
+  const [supActive, setSupActive] = useState(false);
   const [saved, setSaved] = useState(false);
   const [showComment, setShowComment] = useState(false);
   const [commentText, setCommentText] = useState("");
@@ -122,7 +123,6 @@ const Index = () => {
               Premium Fashion • Lifestyle • Glamour Videos
             </p>
           </div>
-          <span className="text-sm font-bold text-primary uppercase tracking-wider">sup</span>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
           <Link to="/" className="text-primary tracking-wide">HOME</Link>
@@ -136,6 +136,16 @@ const Index = () => {
               {item}
             </a>
           ))}
+          <button
+            onClick={() => setSupActive((v) => !v)}
+            className={`tracking-wide uppercase transition-all duration-300 hover:scale-105 ${
+              supActive
+                ? "bg-primary text-primary-foreground px-4 py-1.5 rounded-full font-bold shadow-lg shadow-primary/30 animate-scale-in"
+                : "text-muted-foreground hover:text-primary font-medium"
+            }`}
+          >
+            sup
+          </button>
         </nav>
       </header>
 
