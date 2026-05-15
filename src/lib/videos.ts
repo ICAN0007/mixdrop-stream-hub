@@ -155,7 +155,7 @@ export const videos: Video[] = [
   model: "Rae Lil Black"
 },
 {
-  id: "V13",
+  id: "V14",
   title: "Y2K photo shoot with a beauty.",
   categories: ["Glamour"],
   tags: ["#Glamour", "#Luxury", "#Trending"],
@@ -164,6 +164,17 @@ export const videos: Video[] = [
   duration: "600",
   addedAt: "2026-04-08T15:30:00Z",
   model: "Elly Clutch"
+},
+{
+  id: "V15",
+  title: "Green Eyed Monster",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Luxury", "#Trending"],
+  src: "https://mxdrop.sx/e/ow4w3gzoim8rzo",
+  thumb: "https://i.ibb.co/7N8c46w5/Green-Eyed-Monster.webp",
+  duration: "600",
+  addedAt: "2026-05-015T15:30:00Z",
+  model: "Rae Lil Black"
 }  
 ];
 
