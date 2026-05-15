@@ -94,8 +94,7 @@ export const videos: Video[] = [
   categories: ["Glamour"],
   tags: ["#Glamour", "#Premium", "#Trending"],
   src: "//mxdrop.sx/e/7k9pjpmet784q3",
-  thumb: "https://i.ibb.co/4w7MWcFW/Rae-lil-black-in-first.webp
-",
+  thumb: "https://i.ibb.co/4w7MWcFW/Rae-lil-black-in-first.webp",
   duration: "1920",
   addedAt: "2026-04-08T13:00:00Z",
   model: "Rae Lil Black"
@@ -128,8 +127,7 @@ export const videos: Video[] = [
   categories: ["Fashion"],
   tags: ["#Fashion", "#Luxury", "#Trending"],
   src: "//mxdrop.sx/e/dk3dr3nwf1em7v",
-  thumb: "https://i.ibb.co/DPnRXFHM/Perfect-Babe-Rae-Cant-Resist.webp
-",
+  thumb: "https://i.ibb.co/DPnRXFHM/Perfect-Babe-Rae-Cant-Resist.webp",
   duration: "1920",
   addedAt: "2026-04-08T14:30:00Z",
   model: "Rae Lil Black"
