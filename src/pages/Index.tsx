@@ -8,6 +8,8 @@ import {
   formatDuration,
   getVideoEmbedUrl,
   getVideoThumbnailUrl,
+  getVideoModels,
+  videoHasModel,
 } from "@/lib/videos";
 import {
   Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder, X,
@@ -52,7 +54,7 @@ const Index = () => {
     if (!searchQuery.trim()) return null;
     const q = searchQuery.toLowerCase();
     const matchedVideos = videos.filter(
-      (v) => v.title.toLowerCase().includes(q) || v.model.toLowerCase().includes(q)
+      (v) => v.title.toLowerCase().includes(q) || getVideoModels(v).some((m) => m.toLowerCase().includes(q))
     ).slice(0, 5);
     const matchedModels = modelCodes.filter((m) => m.toLowerCase().includes(q)).slice(0, 5);
     const matchedCategories = categories.filter((c) => c.name.toLowerCase().includes(q)).slice(0, 5);
@@ -64,7 +66,7 @@ const Index = () => {
   const filteredVideos = useMemo(() => {
     let result = videos;
     if (selectedModel) {
-      result = result.filter((v) => v.model === selectedModel);
+      result = result.filter((v) => videoHasModel(v, selectedModel));
     }
     if (selectedTag) {
       result = result.filter((v) => v.tags.includes(selectedTag));
@@ -82,7 +84,7 @@ const Index = () => {
       result = result.filter(
         (v) =>
           v.title.toLowerCase().includes(q) ||
-          v.model.toLowerCase().includes(q) ||
+          getVideoModels(v).some((m) => m.toLowerCase().includes(q)) ||
           v.categories.some((c) => c.toLowerCase().includes(q)) ||
           v.tags.some((t) => t.toLowerCase().includes(q))
       );
@@ -102,10 +104,11 @@ const Index = () => {
     return modelCodes.filter((m) => m.toLowerCase().includes(q));
   }, [searchQuery]);
 
-  // Recommended videos: ONLY same model, excluding current
+  // Recommended videos: any matching model, excluding current
   const recommendedVideos = useMemo(() => {
+    const activeModels = getVideoModels(activeVideo);
     return videos.filter(
-      (v) => v.id !== activeVideo.id && v.model === activeVideo.model
+      (v) => v.id !== activeVideo.id && getVideoModels(v).some((m) => activeModels.includes(m))
     );
   }, [activeVideo]);
 
@@ -360,17 +363,20 @@ const Index = () => {
                   <h2 className="text-xl font-bold text-foreground leading-snug">
                     {activeVideo.title}
                   </h2>
-                  <div className="flex items-center gap-3">
-                    <button
-                      onClick={() => {
-                        setSelectedModel(activeVideo.model);
-                        setSelectedTag(null);
-                        scrollToCollection();
-                      }}
-                      className="text-xs font-semibold text-primary hover:underline cursor-pointer"
-                    >
-                      {activeVideo.model}
-                    </button>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {getVideoModels(activeVideo).map((m) => (
+                      <button
+                        key={m}
+                        onClick={() => {
+                          setSelectedModel(m);
+                          setSelectedTag(null);
+                          scrollToCollection();
+                        }}
+                        className="text-sm font-semibold text-primary hover:underline cursor-pointer"
+                      >
+                        {m}
+                      </button>
+                    ))}
                     <span className="text-muted-foreground/30">•</span>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />

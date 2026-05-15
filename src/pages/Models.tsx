@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { videos, modelCodes, formatDuration, getVideoThumbnailUrl } from "@/lib/videos";
+import { videos, modelCodes, formatDuration, getVideoThumbnailUrl, getVideoModels, videoHasModel } from "@/lib/videos";
 import { Search, Play, Clock, ArrowLeft, User, Film } from "lucide-react";
 
 const Models = () => {
@@ -15,14 +15,16 @@ const Models = () => {
 
   const modelVideos = useMemo(() => {
     if (!selectedModel) return [];
-    return videos.filter((v) => v.model === selectedModel);
+    return videos.filter((v) => videoHasModel(v, selectedModel));
   }, [selectedModel]);
 
-  // Count videos per model
+  // Count videos per model (counts each model in multi-model videos)
   const modelVideoCount = useMemo(() => {
     const counts: Record<string, number> = {};
     videos.forEach((v) => {
-      counts[v.model] = (counts[v.model] || 0) + 1;
+      getVideoModels(v).forEach((m) => {
+        counts[m] = (counts[m] || 0) + 1;
+      });
     });
     return counts;
   }, []);
@@ -143,27 +145,29 @@ const Models = () => {
             )}
           </div>
         ) : (
-          <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {filteredModels.map((model) => {
               const count = modelVideoCount[model] || 0;
               return (
                 <button
                   key={model}
+                  type="button"
                   onClick={() => {
                     setSelectedModel(model);
                     setSearchQuery("");
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
-                  className="group flex flex-col items-center gap-3 rounded-2xl border border-border bg-card p-5 hover:border-primary/50 hover:bg-primary/5 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
+                  className="group flex flex-col items-center gap-3 rounded-2xl border border-border bg-card p-6 hover:border-primary/50 hover:bg-primary/5 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 cursor-pointer"
                 >
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-primary/5 text-primary text-lg font-bold border border-primary/20 group-hover:from-primary group-hover:to-primary/80 group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
+                  <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-primary/5 text-primary text-2xl font-bold border border-primary/20 group-hover:from-primary group-hover:to-primary/80 group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
                     {model.split(" ").map((w) => w[0]).join("")}
                   </span>
                   <div className="text-center min-w-0 w-full">
-                    <p className="text-xs font-semibold text-foreground truncate group-hover:text-primary transition-colors">
+                    <p className="text-base font-bold text-foreground truncate group-hover:text-primary transition-colors">
                       {model}
                     </p>
                     {count > 0 && (
-                      <p className="text-[10px] text-primary mt-0.5">{count} video{count !== 1 ? "s" : ""}</p>
+                      <p className="text-xs text-primary mt-1 font-semibold">{count} video{count !== 1 ? "s" : ""}</p>
                     )}
                   </div>
                 </button>
