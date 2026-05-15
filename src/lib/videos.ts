@@ -127,8 +127,7 @@ export const videos: Video[] = [
   categories: ["Fashion"],
   tags: ["#Fashion", "#Luxury", "#Trending"],
   src: "//mxdrop.sx/e/dk3dr3nwf1em7v",
-  thumb: "https://i.ibb.co/DPnRXFHM/Perfect-Babe-Rae-Cant-Resist.webp
-",
+  thumb: "https://i.ibb.co/DPnRXFHM/Perfect-Babe-Rae-Cant-Resist.webp",
   duration: "1920",
   addedAt: "2026-04-08T14:30:00Z",
   model: "Rae Lil Black"
