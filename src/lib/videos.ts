@@ -271,3 +271,16 @@ export function formatDuration(seconds: string): string {
   const rem = s % 60;
   return `${m}:${rem.toString().padStart(2, "0")}`;
 }
+
+// Returns the list of models for a video. Supports comma/&/+ separated names
+// in the `model` field (e.g. "Eliza Ibarra & Mick Blue").
+export function getVideoModels(v: { model: string }): string[] {
+  return v.model
+    .split(/\s*(?:,|&|\+|\/| and )\s*/i)
+    .map((m) => m.trim())
+    .filter(Boolean);
+}
+
+export function videoHasModel(v: { model: string }, name: string): boolean {
+  return getVideoModels(v).some((m) => m.toLowerCase() === name.toLowerCase());
+}
