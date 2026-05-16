@@ -8,7 +8,7 @@ import {
   formatDuration,
   getVideoThumbnailUrl,
 } from "@/lib/videos";
-import { ArrowLeft, Play, Eye, Heart, Check } from "lucide-react";
+import { ArrowLeft, Play, Eye, Heart, Check, Share2, Star, Sparkles, Film } from "lucide-react";
 
 const ModelProfile = () => {
   const { slug } = useParams<{ slug: string }>();
