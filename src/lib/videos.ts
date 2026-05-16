@@ -265,6 +265,48 @@ export const modelcodes = modelCodes;
 
 export const filters = ["All", "Indian", "Foreign", "Trending", "Premium", "4K", "New", "Popular", "Models"];
 
+export interface ModelProfile {
+  image: string;
+  bio: string;
+}
+
+export const modelProfiles: Record<string, ModelProfile> = {
+  "Rae Lil Black": {
+    image: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
+    bio: "Bold, magnetic and unforgettable — Rae Lil Black brings a rare blend of confidence and editorial-grade style to every frame.",
+  },
+  "Agatha Vega": {
+    image: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
+    bio: "Latin elegance meets modern glamour. Agatha Vega is known for her cinematic presence and timeless beauty.",
+  },
+  "Eve Sweet": {
+    image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
+    bio: "Soft features, striking style. Eve Sweet is a rising name redefining contemporary luxury fashion.",
+  },
+  "Rikako Katayama": {
+    image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
+    bio: "An icon of Eastern glamour, Rikako Katayama blends grace, mystery and high-fashion sophistication.",
+  },
+};
+
+export function getModelProfile(name: string): ModelProfile {
+  return (
+    modelProfiles[name] ?? {
+      image: `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=111111&textColor=ffffff`,
+      bio: `${name} — a featured model on ExclusiveClips4. Premium fashion, lifestyle and glamour content.`,
+    }
+  );
+}
+
+export function slugifyModel(name: string): string {
+  return name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+}
+
+export function unslugifyModel(slug: string): string | null {
+  const target = slug.toLowerCase();
+  return modelCodes.find((m) => slugifyModel(m) === target) ?? null;
+}
+
 export function getVideoEmbedUrl(src: string): string {
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
   if (src.startsWith("//")) return `https:${src}`;
