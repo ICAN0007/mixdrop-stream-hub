@@ -273,19 +273,19 @@ export interface ModelProfile {
 export const modelProfiles: Record<string, ModelProfile> = {
   "Rae Lil Black": {
     image: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
-    bio: "Bold, magnetic and unforgettable — Rae Lil Black brings a rare blend of confidence and editorial-grade style to every frame.",
+    bio: "Bold, magnetic and unforgettable, Rae Lil Black brings a rare blend of confidence and editorial-grade style to every frame. A genre-defining presence in modern luxury fashion storytelling.",
   },
   "Agatha Vega": {
     image: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
-    bio: "Latin elegance meets modern glamour. Agatha Vega is known for her cinematic presence and timeless beauty.",
+    bio: "Latin elegance meets modern glamour. Agatha Vega is celebrated for her cinematic presence, expressive eyes and a timeless beauty that translates effortlessly across high-fashion campaigns.",
   },
   "Eve Sweet": {
     image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    bio: "Soft features, striking style. Eve Sweet is a rising name redefining contemporary luxury fashion.",
+    bio: "Soft features, striking style. Eve Sweet is a rising name redefining contemporary luxury fashion with a quiet confidence and a signature, editorial-grade aesthetic.",
   },
   "Rikako Katayama": {
     image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    bio: "An icon of Eastern glamour, Rikako Katayama blends grace, mystery and high-fashion sophistication.",
+    bio: "An icon of Eastern glamour, Rikako Katayama blends grace, mystery and high-fashion sophistication. Her work celebrates minimalism, precision and timeless luxury.",
   },
 };
 
@@ -293,7 +293,7 @@ export function getModelProfile(name: string): ModelProfile {
   return (
     modelProfiles[name] ?? {
       image: `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=111111&textColor=ffffff`,
-      bio: `${name} — a featured model on ExclusiveClips4. Premium fashion, lifestyle and glamour content.`,
+      bio: `${name} is a featured model on ExclusiveClips4, known for a refined presence in premium fashion and lifestyle features. Expect a distinctive style and consistently editorial-grade content.`,
     }
   );
 }
