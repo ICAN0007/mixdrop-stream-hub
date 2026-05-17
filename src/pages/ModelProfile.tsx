@@ -9,6 +9,7 @@ import {
   getVideoThumbnailUrl,
 } from "@/lib/videos";
 import { ArrowLeft, Play, Eye, Heart, Check, Share2, Star, Sparkles, Film } from "lucide-react";
+import PixelAtmosphere from "@/components/PixelAtmosphere";
 
 const ModelProfile = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -45,30 +46,50 @@ const ModelProfile = () => {
   }
 
   return (
-    <div className="min-h-screen">
-      <header className="border-b border-border px-6 py-4 grid grid-cols-3 items-center">
-        <div />
-        <div className="text-center">
-          <Link to="/" className="text-2xl font-black tracking-tight">
-            <span className="text-primary">Exclusive</span>
-            <span className="text-foreground">Clips4</span>
-          </Link>
-        </div>
-        <nav className="hidden md:flex items-center justify-end gap-6 text-sm font-medium text-muted-foreground">
-          <Link to="/" className="hover:text-primary transition-colors tracking-wide">HOME</Link>
-          <Link to="/models" className="text-primary tracking-wide">MODELS</Link>
-        </nav>
-      </header>
+    <div className="min-h-screen relative bg-[#050505]">
+      {/* Ambient atmosphere */}
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <PixelAtmosphere density={55} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(220,50,60,0.12),transparent_55%),radial-gradient(circle_at_85%_70%,rgba(255,200,120,0.07),transparent_55%)]" />
+      </div>
 
-      {/* Hero */}
+      <div className="relative z-10">
+        <header className="border-b border-white/5 px-6 py-4 grid grid-cols-3 items-center backdrop-blur-md bg-black/30">
+          <div />
+          <div className="text-center">
+            <Link to="/" className="text-2xl font-black tracking-tight">
+              <span className="text-primary">Exclusive</span>
+              <span className="text-white">Clips4</span>
+            </Link>
+          </div>
+          <nav className="hidden md:flex items-center justify-end gap-6 text-sm font-medium text-white/60">
+            <Link to="/" className="hover:text-primary transition-colors tracking-wide">HOME</Link>
+            <Link to="/models" className="text-primary tracking-wide">MODELS</Link>
+          </nav>
+        </header>
+
+      {/* Hero — cinematic banner */}
       <section className="relative">
-        <div className="relative h-[420px] sm:h-[500px] w-full overflow-hidden">
+        <div className="relative h-[480px] sm:h-[620px] w-full overflow-hidden">
           <img
-            src={profile.image}
+            src={profile.hero}
             alt={modelName}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover scale-105 animate-[fade-in_1.2s_ease-out]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
+          {/* Cinematic vignette + gradients */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-[#050505]/10" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,0.75)_100%)]" />
+          {/* Noise overlay */}
+          <div className="absolute inset-0 opacity-[0.07] mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>\")" }} />
+          {/* Giant ghost name */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-4 sm:bottom-8 flex justify-center overflow-hidden">
+            <span
+              className="text-[18vw] sm:text-[14vw] font-black tracking-[0.05em] uppercase leading-none text-white/[0.05] whitespace-nowrap select-none"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            >
+              {modelName}
+            </span>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 -mt-40 sm:-mt-48 relative z-10">
