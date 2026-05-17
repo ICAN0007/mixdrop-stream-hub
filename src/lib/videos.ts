@@ -248,7 +248,6 @@ export const modelCodes = [
   "Lulu Chu",
   "Megan Murkovski",
   "Melanie Marie",
-  "Mick Blue",
   "Molly Little",
   "Rae Lil Black",
   "Rikako Katayama",
