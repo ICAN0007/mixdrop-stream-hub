@@ -278,31 +278,124 @@ export interface ModelProfile {
 }
 
 export const modelProfiles: Record<string, ModelProfile> = {
-  "Rae Lil Black": {
-    image: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
-    hero: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
-    bio: "Bold, magnetic and unforgettable, Rae Lil Black brings a rare blend of confidence and editorial-grade style to every frame. A genre-defining presence in modern luxury fashion storytelling.",
+  "Abella Danger": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Abella Danger is known for bold glamour, cinematic beauty and a commanding editorial presence that defines modern luxury fashion storytelling.",
   },
+
+  "Adria Rae": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Adria Rae blends elegance, charm and premium visual aesthetics into a polished high-fashion inspired identity.",
+  },
+
   "Agatha Vega": {
     image: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
+    card: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
     hero: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
+    portrait: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
     bio: "Latin elegance meets modern glamour. Agatha Vega is celebrated for her cinematic presence, expressive eyes and a timeless beauty that translates effortlessly across high-fashion campaigns.",
   },
-  "Eve Sweet": {
-    image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    bio: "Soft features, striking style. Eve Sweet is a rising name redefining contemporary luxury fashion with a quiet confidence and a signature, editorial-grade aesthetic.",
+
+  "Angel Gostosa": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Angel Gostosa delivers radiant glamour and luxurious visual storytelling with a confident and unforgettable screen presence.",
   },
-  "Rikako Katayama": {
-    image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    hero: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    bio: "An icon of Eastern glamour, Rikako Katayama blends grace, mystery and high-fashion sophistication. Her work celebrates minimalism, precision and timeless luxury.",
+
+  "Aria Lee": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Aria Lee combines playful energy with editorial-inspired sophistication, creating a signature modern luxury aesthetic.",
   },
+
+  "Azul Hermosa": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Azul Hermosa is admired for refined glamour, striking visuals and a captivating luxury-inspired presence.",
+  },
+
+  "Bailey Base": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Bailey Base brings confidence, premium style and cinematic beauty into every modern editorial-inspired feature.",
+  },
+
+  "Chanel Camryn": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Chanel Camryn is celebrated for polished glamour, timeless beauty and an effortlessly cinematic fashion-forward aesthetic.",
+  },
+
+  "Cherie DeVille": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Cherie DeVille blends sophistication, elegance and mature luxury aesthetics into a distinctive editorial identity.",
+  },
+
+  "Chloe Surreal": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Chloe Surreal delivers dreamy visuals, radiant confidence and a stylish contemporary luxury atmosphere.",
+  },
+
+  "Coco Lovelock": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Coco Lovelock combines youthful charm, premium visual style and high-end cinematic storytelling.",
+  },
+
+  "Elsa Jean": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Elsa Jean is admired for soft glamour, radiant elegance and a timeless editorial-inspired visual identity.",
+  },
+
   "Eva Elfie": {
     image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
     card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
     hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
     portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Eva Elfie is one of the most recognizable faces in modern luxury entertainment, known for her radiant on-screen presence and effortlessly cinematic style. A true editorial muse blending charm, glamour and high-fashion poise.",
+    bio: "Eva Elfie is one of the most recognizable faces in modern luxury entertainment, known for her radiant on-screen presence and effortlessly cinematic style.",
+  },
+
+  "Rae Lil Black": {
+    image: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
+    card: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
+    hero: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
+    portrait: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
+    bio: "Bold, magnetic and unforgettable, Rae Lil Black brings a rare blend of confidence and editorial-grade style to every frame.",
+  },
+
+  "Rikako Katayama": {
+    image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
+    card: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
+    hero: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
+    portrait: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
+    bio: "An icon of Eastern glamour, Rikako Katayama blends grace, mystery and high-fashion sophistication.",
   },
 };
 
