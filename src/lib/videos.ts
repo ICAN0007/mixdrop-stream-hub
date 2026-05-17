@@ -270,17 +270,22 @@ export const modelcodes = modelCodes;
 export const filters = ["All", "Indian", "Foreign", "Trending", "Premium", "4K", "New", "Popular", "Models"];
 
 export interface ModelProfile {
-  image: string;
+  image: string;       // main / fallback portrait
+  card?: string;       // 9:16 grid poster (defaults to image)
+  hero?: string;       // wide cinematic banner (defaults to image)
+  portrait?: string;   // side portrait (defaults to image)
   bio: string;
 }
 
 export const modelProfiles: Record<string, ModelProfile> = {
   "Rae Lil Black": {
     image: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
+    hero: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
     bio: "Bold, magnetic and unforgettable, Rae Lil Black brings a rare blend of confidence and editorial-grade style to every frame. A genre-defining presence in modern luxury fashion storytelling.",
   },
   "Agatha Vega": {
     image: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
+    hero: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
     bio: "Latin elegance meets modern glamour. Agatha Vega is celebrated for her cinematic presence, expressive eyes and a timeless beauty that translates effortlessly across high-fashion campaigns.",
   },
   "Eve Sweet": {
@@ -289,17 +294,30 @@ export const modelProfiles: Record<string, ModelProfile> = {
   },
   "Rikako Katayama": {
     image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
+    hero: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
     bio: "An icon of Eastern glamour, Rikako Katayama blends grace, mystery and high-fashion sophistication. Her work celebrates minimalism, precision and timeless luxury.",
+  },
+  "Eva Elfie": {
+    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    bio: "Eva Elfie is one of the most recognizable faces in modern luxury entertainment, known for her radiant on-screen presence and effortlessly cinematic style. A true editorial muse blending charm, glamour and high-fashion poise.",
   },
 };
 
 export function getModelProfile(name: string): ModelProfile {
-  return (
-    modelProfiles[name] ?? {
-      image: `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=111111&textColor=ffffff`,
-      bio: `${name} is a featured model on ExclusiveClips4, known for a refined presence in premium fashion and lifestyle features. Expect a distinctive style and consistently editorial-grade content.`,
-    }
-  );
+  const fallback = `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=111111&textColor=ffffff`;
+  const base = modelProfiles[name] ?? {
+    image: fallback,
+    bio: `${name} is a featured model on ExclusiveClips4, known for a refined presence in premium fashion and lifestyle features. Expect a distinctive style and consistently editorial-grade content.`,
+  };
+  return {
+    ...base,
+    card: base.card ?? base.image,
+    hero: base.hero ?? base.image,
+    portrait: base.portrait ?? base.image,
+  };
 }
 
 export function slugifyModel(name: string): string {
