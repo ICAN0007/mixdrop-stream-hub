@@ -94,16 +94,22 @@ const ModelProfile = () => {
 
         <div className="max-w-7xl mx-auto px-4 -mt-40 sm:-mt-48 relative z-10">
           <div className="flex flex-col md:flex-row items-start md:items-end gap-6">
-            <div className="relative h-44 w-44 sm:h-52 sm:w-52 shrink-0 overflow-hidden rounded-2xl border-4 border-background shadow-2xl shadow-black/60 bg-card">
-              <img src={profile.image} alt={modelName} className="h-full w-full object-cover" />
+            <div className="relative h-56 w-44 sm:h-72 sm:w-56 shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/80 bg-card ring-1 ring-primary/20">
+              <img src={profile.portrait} alt={modelName} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <span className="absolute top-2 right-2 flex items-center gap-1 rounded-full bg-primary/95 text-primary-foreground text-[10px] font-bold px-2 py-0.5 backdrop-blur-sm shadow-lg shadow-primary/40">
                 <Sparkles className="h-3 w-3" /> VERIFIED
               </span>
             </div>
             <div className="flex-1 min-w-0 space-y-4 pb-2">
               <div className="space-y-1.5">
-                <p className="text-[11px] uppercase tracking-[0.4em] text-primary font-bold">Featured Model</p>
-                <h1 className="text-4xl sm:text-6xl font-black text-foreground tracking-tight leading-none">{modelName}</h1>
+                <p className="text-[11px] uppercase tracking-[0.4em] text-primary font-bold">Exclusive Performer</p>
+                <h1
+                  className="text-5xl sm:text-7xl font-black text-white tracking-tight leading-[0.95]"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  {modelName}
+                </h1>
                 <div className="flex items-center gap-2 pt-1">
                   <div className="flex items-center gap-0.5 text-primary">
                     {[...Array(5)].map((_, i) => (
@@ -236,6 +242,7 @@ const ModelProfile = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };
