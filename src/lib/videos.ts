@@ -359,7 +359,7 @@ export interface ModelProfile {
 export const modelProfiles: Record<string, ModelProfile> = {
   "Abella Danger": {
     "image": "https://i.ibb.co/8D3108Th/tushy-abella-danger-3840x1600.webp",
-    "card": "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    "card": "https://i.ibb.co/8D3108Th/tushy-abella-danger-3840x1600.webp",
     "hero": "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
     "portrait": "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
     "bio": "Abella Danger is known for bold glamour, cinematic beauty and a commanding editorial presence that defines modern luxury fashion storytelling.",
