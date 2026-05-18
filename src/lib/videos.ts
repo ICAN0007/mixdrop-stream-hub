@@ -396,7 +396,7 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "image": "https://i.ibb.co/xW93spW/Alexis-Tae-3.png",
     "card": "https://i.ibb.co/xW93spW/Alexis-Tae-3.png",
     "hero": "https://i.ibb.co/jC2WBkW/slayed-alexis-tae-3840x1600.webp",
-    "portrait": "https://i.ibb.co/jC2WBkW/slayed-alexis-tae-3840x1600.webp",
+    "portrait": "https://i.ibb.co/ns0t33mm/deeper-alexis-tae-1900x1300.webp",
     "bio": "Alexis Tae shines with her athletic build, glowing skin, and dynamic presence.",
   },
   "Amber Moore": {
