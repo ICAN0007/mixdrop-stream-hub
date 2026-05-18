@@ -4,7 +4,7 @@ export interface Video {
   categories: string[];
   tags: string[];
   src: string;
-  thumb: string;
+  thumb: string;abe
   duration: string;
   addedAt: string;
   model: string;
@@ -358,7 +358,7 @@ export interface ModelProfile {
 
 export const modelProfiles: Record<string, ModelProfile> = {
   "Abella Danger": {
-    "image": "https://i.ibb.co/8D3108Th/tushy-abella-danger-3840x1600.webp1",
+    "image": "https://i.ibb.co/DfRpszH6/Abella-Danger-2.png",
     "card": "https://i.ibb.co/8D3108Th/tushy-abella-danger-3840x1600.webp",
     "hero": "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
     "portrait": "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
