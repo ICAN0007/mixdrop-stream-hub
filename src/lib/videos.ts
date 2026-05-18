@@ -346,126 +346,855 @@ export interface ModelProfile {
 }
 
 export const modelProfiles: Record<string, ModelProfile> = {
+  {
   "Abella Danger": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Abella Danger is known for bold glamour, cinematic beauty and a commanding editorial presence that defines modern luxury fashion storytelling.",
+    "image": "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    "card": "https://i.ibb.co/HW1S0CL/117849024.jpg",
+    "hero": "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    "portrait": "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    "bio": "Abella Danger is known for bold glamour, cinematic beauty and a commanding editorial presence that defines modern luxury fashion storytelling."
   },
-
   "Adria Rae": {
-    image: "https://files.catbox.moe/hdj3bc.png",
-    card: "https://files.catbox.moe/hdj3bc.png",
-    hero: "https://i.ibb.co/jPDrmhTM/blacked-aria-lee-3840x1600.webp",
-    portrait: "https://i.ibb.co/KpGxkRBd/blacked-aria-lee-1900x1300.webp",
-    bio: "Adria Rae blends elegance, charm and premium visual aesthetics into a polished high-fashion inspired identity.",
+    "image": "https://i.ibb.co/placeholder/adria-rae.jpg",
+    "card": "https://i.ibb.co/placeholder/adria-rae.jpg",
+    "hero": "https://i.ibb.co/placeholder/adria-rae-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/adria-rae-portrait.webp",
+    "bio": "Adria Rae brings a fresh, playful energy with delicate features and expressive performances that captivate audiences worldwide."
   },
-
   "Agatha Vega": {
-    image: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
-    card: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
-    hero: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
-    portrait: "https://i.ibb.co/wFCVQLks/agatha-vega-1900x1300.webp",
-    bio: "Latin elegance meets modern glamour. Agatha Vega is celebrated for her cinematic presence, expressive eyes and a timeless beauty that translates effortlessly across high-fashion campaigns.",
+    "image": "https://i.ibb.co/placeholder/agatha-vega.jpg",
+    "card": "https://i.ibb.co/placeholder/agatha-vega.jpg",
+    "hero": "https://i.ibb.co/placeholder/agatha-vega-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/agatha-vega-portrait.webp",
+    "bio": "Agatha Vega dazzles with her striking Latina beauty, sensual curves, and magnetic screen presence."
   },
-
+  "Ailee Anne": {
+    "image": "https://i.ibb.co/placeholder/ailee-anne.jpg",
+    "card": "https://i.ibb.co/placeholder/ailee-anne.jpg",
+    "hero": "https://i.ibb.co/placeholder/ailee-anne-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ailee-anne-portrait.webp",
+    "bio": "Ailee Anne is celebrated for her youthful charm, bright smile, and versatile performances."
+  },
+  "Alexia Anders": {
+    "image": "https://i.ibb.co/placeholder/alexia-anders.jpg",
+    "card": "https://i.ibb.co/placeholder/alexia-anders.jpg",
+    "hero": "https://i.ibb.co/placeholder/alexia-anders-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/alexia-anders-portrait.webp",
+    "bio": "Alexia Anders captivates with exotic looks and passionate intensity."
+  },
+  "Alexis Tae": {
+    "image": "https://i.ibb.co/placeholder/alexis-tae.jpg",
+    "card": "https://i.ibb.co/placeholder/alexis-tae.jpg",
+    "hero": "https://i.ibb.co/placeholder/alexis-tae-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/alexis-tae-portrait.webp",
+    "bio": "Alexis Tae shines with her athletic build, glowing skin, and dynamic presence."
+  },
+  "Amber Moore": {
+    "image": "https://i.ibb.co/placeholder/amber-moore.jpg",
+    "card": "https://i.ibb.co/placeholder/amber-moore.jpg",
+    "hero": "https://i.ibb.co/placeholder/amber-moore-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/amber-moore-portrait.webp",
+    "bio": "Amber Moore delivers sweet innocence paired with sultry sophistication."
+  },
+  "Ameena Green": {
+    "image": "https://i.ibb.co/placeholder/ameena-green.jpg",
+    "card": "https://i.ibb.co/placeholder/ameena-green.jpg",
+    "hero": "https://i.ibb.co/placeholder/ameena-green-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ameena-green-portrait.webp",
+    "bio": "Ameena Green stands out with her vibrant personality and stunning natural beauty."
+  },
   "Angel Gostosa": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Angel Gostosa delivers radiant glamour and luxurious visual storytelling with a confident and unforgettable screen presence.",
+    "image": "https://i.ibb.co/placeholder/angel-gostosa.jpg",
+    "card": "https://i.ibb.co/placeholder/angel-gostosa.jpg",
+    "hero": "https://i.ibb.co/placeholder/angel-gostosa-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/angel-gostosa-portrait.webp",
+    "bio": "Angel Gostosa brings fiery passion and irresistible curves to every scene."
   },
-
+  "Angel Youngs": {
+    "image": "https://i.ibb.co/placeholder/angel-youngs.jpg",
+    "card": "https://i.ibb.co/placeholder/angel-youngs.jpg",
+    "hero": "https://i.ibb.co/placeholder/angel-youngs-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/angel-youngs-portrait.webp",
+    "bio": "Angel Youngs is known for her angelic face and devilishly seductive style."
+  },
+  "Angelina Moon": {
+    "image": "https://i.ibb.co/placeholder/angelina-moon.jpg",
+    "card": "https://i.ibb.co/placeholder/angelina-moon.jpg",
+    "hero": "https://i.ibb.co/placeholder/angelina-moon-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/angelina-moon-portrait.webp",
+    "bio": "Angelina Moon enchants with ethereal beauty and graceful movements."
+  },
+  "Angie Faith": {
+    "image": "https://i.ibb.co/placeholder/angie-faith.jpg",
+    "card": "https://i.ibb.co/placeholder/angie-faith.jpg",
+    "hero": "https://i.ibb.co/placeholder/angie-faith-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/angie-faith-portrait.webp",
+    "bio": "Angie Faith radiates pure charm and heartfelt sensuality."
+  },
+  "Anissa Kate": {
+    "image": "https://i.ibb.co/placeholder/anissa-kate.jpg",
+    "card": "https://i.ibb.co/placeholder/anissa-kate.jpg",
+    "hero": "https://i.ibb.co/placeholder/anissa-kate-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/anissa-kate-portrait.webp",
+    "bio": "Anissa Kate is a sophisticated European beauty with timeless elegance."
+  },
   "Aria Lee": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Aria Lee combines playful energy with editorial-inspired sophistication, creating a signature modern luxury aesthetic.",
+    "image": "https://i.ibb.co/placeholder/aria-lee.jpg",
+    "card": "https://i.ibb.co/placeholder/aria-lee.jpg",
+    "hero": "https://i.ibb.co/placeholder/aria-lee-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/aria-lee-portrait.webp",
+    "bio": "Aria Lee combines petite beauty with explosive on-screen energy."
   },
-
+  "Aria Taylor": {
+    "image": "https://i.ibb.co/placeholder/aria-taylor.jpg",
+    "card": "https://i.ibb.co/placeholder/aria-taylor.jpg",
+    "hero": "https://i.ibb.co/placeholder/aria-taylor-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/aria-taylor-portrait.webp",
+    "bio": "Aria Taylor offers a perfect blend of girl-next-door appeal and high fashion."
+  },
+  "Armani Black": {
+    "image": "https://i.ibb.co/placeholder/armani-black.jpg",
+    "card": "https://i.ibb.co/placeholder/armani-black.jpg",
+    "hero": "https://i.ibb.co/placeholder/armani-black-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/armani-black-portrait.webp",
+    "bio": "Armani Black commands attention with powerful curves and confident presence."
+  },
+  "Ashby Winter": {
+    "image": "https://i.ibb.co/placeholder/ashby-winter.jpg",
+    "card": "https://i.ibb.co/placeholder/ashby-winter.jpg",
+    "hero": "https://i.ibb.co/placeholder/ashby-winter-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ashby-winter-portrait.webp",
+    "bio": "Ashby Winter brings cool sophistication and striking visual appeal."
+  },
+  "Ashley Aixi": {
+    "image": "https://i.ibb.co/placeholder/ashley-aixi.jpg",
+    "card": "https://i.ibb.co/placeholder/ashley-aixi.jpg",
+    "hero": "https://i.ibb.co/placeholder/ashley-aixi-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ashley-aixi-portrait.webp",
+    "bio": "Ashley Aixi mesmerizes with delicate Asian features and sensual grace."
+  },
+  "Ashley Alexander": {
+    "image": "https://i.ibb.co/placeholder/ashley-alexander.jpg",
+    "card": "https://i.ibb.co/placeholder/ashley-alexander.jpg",
+    "hero": "https://i.ibb.co/placeholder/ashley-alexander-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ashley-alexander-portrait.webp",
+    "bio": "Ashley Alexander stands tall with elegant proportions and refined beauty."
+  },
+  "Avery Cristy": {
+    "image": "https://i.ibb.co/placeholder/avery-cristy.jpg",
+    "card": "https://i.ibb.co/placeholder/avery-cristy.jpg",
+    "hero": "https://i.ibb.co/placeholder/avery-cristy-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/avery-cristy-portrait.webp",
+    "bio": "Avery Cristy shines with bright charisma and stunning natural looks."
+  },
   "Azul Hermosa": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Azul Hermosa is admired for refined glamour, striking visuals and a captivating luxury-inspired presence.",
+    "image": "https://i.ibb.co/placeholder/azul-hermosa.jpg",
+    "card": "https://i.ibb.co/placeholder/azul-hermosa.jpg",
+    "hero": "https://i.ibb.co/placeholder/azul-hermosa-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/azul-hermosa-portrait.webp",
+    "bio": "Azul Hermosa radiates vibrant Latin energy and breathtaking curves."
   },
-
   "Bailey Base": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Bailey Base brings confidence, premium style and cinematic beauty into every modern editorial-inspired feature.",
+    "image": "https://i.ibb.co/placeholder/bailey-base.jpg",
+    "card": "https://i.ibb.co/placeholder/bailey-base.jpg",
+    "hero": "https://i.ibb.co/placeholder/bailey-base-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/bailey-base-portrait.webp",
+    "bio": "Bailey Base delivers fresh, youthful appeal with undeniable star quality."
   },
-
+  "Barbie Feels": {
+    "image": "https://i.ibb.co/placeholder/barbie-feels.jpg",
+    "card": "https://i.ibb.co/placeholder/barbie-feels.jpg",
+    "hero": "https://i.ibb.co/placeholder/barbie-feels-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/barbie-feels-portrait.webp",
+    "bio": "Barbie Feels embodies perfect doll-like beauty with glamorous flair."
+  },
+  "Blake Blossom": {
+    "image": "https://i.ibb.co/placeholder/blake-blossom.jpg",
+    "card": "https://i.ibb.co/placeholder/blake-blossom.jpg",
+    "hero": "https://i.ibb.co/placeholder/blake-blossom-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/blake-blossom-portrait.webp",
+    "bio": "Blake Blossom is famous for her incredible natural assets and radiant smile."
+  },
+  "Britney Dutch": {
+    "image": "https://i.ibb.co/placeholder/britney-dutch.jpg",
+    "card": "https://i.ibb.co/placeholder/britney-dutch.jpg",
+    "hero": "https://i.ibb.co/placeholder/britney-dutch-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/britney-dutch-portrait.webp",
+    "bio": "Britney Dutch brings European elegance and playful sensuality."
+  },
+  "Brooklyn Gray": {
+    "image": "https://i.ibb.co/placeholder/brooklyn-gray.jpg",
+    "card": "https://i.ibb.co/placeholder/brooklyn-gray.jpg",
+    "hero": "https://i.ibb.co/placeholder/brooklyn-gray-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/brooklyn-gray-portrait.webp",
+    "bio": "Brooklyn Gray offers edgy style paired with striking beauty."
+  },
+  "Catherine Knight": {
+    "image": "https://i.ibb.co/placeholder/catherine-knight.jpg",
+    "card": "https://i.ibb.co/placeholder/catherine-knight.jpg",
+    "hero": "https://i.ibb.co/placeholder/catherine-knight-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/catherine-knight-portrait.webp",
+    "bio": "Catherine Knight commands the screen with powerful presence and elegance."
+  },
+  "Cecelia Taylor": {
+    "image": "https://i.ibb.co/placeholder/cecelia-taylor.jpg",
+    "card": "https://i.ibb.co/placeholder/cecelia-taylor.jpg",
+    "hero": "https://i.ibb.co/placeholder/cecelia-taylor-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/cecelia-taylor-portrait.webp",
+    "bio": "Cecelia Taylor enchants with sweet features and genuine charm."
+  },
   "Chanel Camryn": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Chanel Camryn is celebrated for polished glamour, timeless beauty and an effortlessly cinematic fashion-forward aesthetic.",
+    "image": "https://i.ibb.co/placeholder/chanel-camryn.jpg",
+    "card": "https://i.ibb.co/placeholder/chanel-camryn.jpg",
+    "hero": "https://i.ibb.co/placeholder/chanel-camryn-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/chanel-camryn-portrait.webp",
+    "bio": "Chanel Camryn blends luxury appeal with raw sensuality."
   },
-
   "Cherie DeVille": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Cherie DeVille blends sophistication, elegance and mature luxury aesthetics into a distinctive editorial identity.",
+    "image": "https://i.ibb.co/placeholder/cherie-deville.jpg",
+    "card": "https://i.ibb.co/placeholder/cherie-deville.jpg",
+    "hero": "https://i.ibb.co/placeholder/cherie-deville-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/cherie-deville-portrait.webp",
+    "bio": "Cherie DeVille is a veteran star known for timeless beauty and professionalism."
   },
-
+  "Chloe Amour": {
+    "image": "https://i.ibb.co/placeholder/chloe-amour.jpg",
+    "card": "https://i.ibb.co/placeholder/chloe-amour.jpg",
+    "hero": "https://i.ibb.co/placeholder/chloe-amour-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/chloe-amour-portrait.webp",
+    "bio": "Chloe Amour radiates warm Latina sensuality and graceful movement."
+  },
   "Chloe Surreal": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Chloe Surreal delivers dreamy visuals, radiant confidence and a stylish contemporary luxury atmosphere.",
+    "image": "https://i.ibb.co/placeholder/chloe-surreal.jpg",
+    "card": "https://i.ibb.co/placeholder/chloe-surreal.jpg",
+    "hero": "https://i.ibb.co/placeholder/chloe-surreal-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/chloe-surreal-portrait.webp",
+    "bio": "Chloe Surreal captivates with dreamlike beauty and artistic expression."
   },
-
+  "Christy White": {
+    "image": "https://i.ibb.co/placeholder/christy-white.jpg",
+    "card": "https://i.ibb.co/placeholder/christy-white.jpg",
+    "hero": "https://i.ibb.co/placeholder/christy-white-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/christy-white-portrait.webp",
+    "bio": "Christy White offers pure, bright appeal with natural elegance."
+  },
   "Coco Lovelock": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Coco Lovelock combines youthful charm, premium visual style and high-end cinematic storytelling.",
+    "image": "https://i.ibb.co/placeholder/coco-lovelock.jpg",
+    "card": "https://i.ibb.co/placeholder/coco-lovelock.jpg",
+    "hero": "https://i.ibb.co/placeholder/coco-lovelock-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/coco-lovelock-portrait.webp",
+    "bio": "Coco Lovelock is adored for her petite frame and bubbly personality."
   },
-
+  "Codi Vore": {
+    "image": "https://i.ibb.co/placeholder/codi-vore.jpg",
+    "card": "https://i.ibb.co/placeholder/codi-vore.jpg",
+    "hero": "https://i.ibb.co/placeholder/codi-vore-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/codi-vore-portrait.webp",
+    "bio": "Codi Vore is known for her voluptuous figure and warm, inviting presence."
+  },
+  "Dana Vespoli": {
+    "image": "https://i.ibb.co/placeholder/dana-vespoli.jpg",
+    "card": "https://i.ibb.co/placeholder/dana-vespoli.jpg",
+    "hero": "https://i.ibb.co/placeholder/dana-vespoli-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/dana-vespoli-portrait.webp",
+    "bio": "Dana Vespoli combines experience, sophistication, and enduring appeal."
+  },
+  "Dani Daniels": {
+    "image": "https://i.ibb.co/placeholder/dani-daniels.jpg",
+    "card": "https://i.ibb.co/placeholder/dani-daniels.jpg",
+    "hero": "https://i.ibb.co/placeholder/dani-daniels-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/dani-daniels-portrait.webp",
+    "bio": "Dani Daniels is a legendary beauty celebrated for artistic vision and charisma."
+  },
+  "Della Cate": {
+    "image": "https://i.ibb.co/placeholder/della-cate.jpg",
+    "card": "https://i.ibb.co/placeholder/della-cate.jpg",
+    "hero": "https://i.ibb.co/placeholder/della-cate-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/della-cate-portrait.webp",
+    "bio": "Della Cate brings fresh innocence and delicate charm."
+  },
+  "Demi Hawks": {
+    "image": "https://i.ibb.co/placeholder/demi-hawks.jpg",
+    "card": "https://i.ibb.co/placeholder/demi-hawks.jpg",
+    "hero": "https://i.ibb.co/placeholder/demi-hawks-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/demi-hawks-portrait.webp",
+    "bio": "Demi Hawks shines with youthful glow and captivating eyes."
+  },
+  "Dolly Orchid": {
+    "image": "https://i.ibb.co/placeholder/dolly-orchid.jpg",
+    "card": "https://i.ibb.co/placeholder/dolly-orchid.jpg",
+    "hero": "https://i.ibb.co/placeholder/dolly-orchid-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/dolly-orchid-portrait.webp",
+    "bio": "Dolly Orchid offers unique exotic beauty and artistic flair."
+  },
+  "Eliza Ibarra": {
+    "image": "https://i.ibb.co/placeholder/eliza-ibarra.jpg",
+    "card": "https://i.ibb.co/placeholder/eliza-ibarra.jpg",
+    "hero": "https://i.ibb.co/placeholder/eliza-ibarra-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/eliza-ibarra-portrait.webp",
+    "bio": "Eliza Ibarra mesmerizes with tall, slender beauty and intense performances."
+  },
+  "Ella Hughes": {
+    "image": "https://i.ibb.co/placeholder/ella-hughes.jpg",
+    "card": "https://i.ibb.co/placeholder/ella-hughes.jpg",
+    "hero": "https://i.ibb.co/placeholder/ella-hughes-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ella-hughes-portrait.webp",
+    "bio": "Ella Hughes brings classic British charm and fiery redhead energy."
+  },
+  "Ellie Leen": {
+    "image": "https://i.ibb.co/placeholder/ellie-leen.jpg",
+    "card": "https://i.ibb.co/placeholder/ellie-leen.jpg",
+    "hero": "https://i.ibb.co/placeholder/ellie-leen-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ellie-leen-portrait.webp",
+    "bio": "Ellie Leen is loved for her adorable features and gentle sensuality."
+  },
+  "Ellie Nova": {
+    "image": "https://i.ibb.co/placeholder/ellie-nova.jpg",
+    "card": "https://i.ibb.co/placeholder/ellie-nova.jpg",
+    "hero": "https://i.ibb.co/placeholder/ellie-nova-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ellie-nova-portrait.webp",
+    "bio": "Ellie Nova explodes with vibrant personality and stunning visuals."
+  },
+  "Elly Clutch": {
+    "image": "https://i.ibb.co/placeholder/elly-clutch.jpg",
+    "card": "https://i.ibb.co/placeholder/elly-clutch.jpg",
+    "hero": "https://i.ibb.co/placeholder/elly-clutch-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/elly-clutch-portrait.webp",
+    "bio": "Elly Clutch captivates with curvy perfection and confident style."
+  },
   "Elsa Jean": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Elsa Jean is admired for soft glamour, radiant elegance and a timeless editorial-inspired visual identity.",
+    "image": "https://i.ibb.co/placeholder/elsa-jean.jpg",
+    "card": "https://i.ibb.co/placeholder/elsa-jean.jpg",
+    "hero": "https://i.ibb.co/placeholder/elsa-jean-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/elsa-jean-portrait.webp",
+    "bio": "Elsa Jean is the ultimate blonde sweetheart with a playful spirit."
   },
-
+  "Emily Willis": {
+    "image": "https://i.ibb.co/placeholder/emily-willis.jpg",
+    "card": "https://i.ibb.co/placeholder/emily-willis.jpg",
+    "hero": "https://i.ibb.co/placeholder/emily-willis-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/emily-willis-portrait.webp",
+    "bio": "Emily Willis combines exotic beauty with fearless creativity."
+  },
+  "Emiri Momota": {
+    "image": "https://i.ibb.co/placeholder/emiri-momota.jpg",
+    "card": "https://i.ibb.co/placeholder/emiri-momota.jpg",
+    "hero": "https://i.ibb.co/placeholder/emiri-momota-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/emiri-momota-portrait.webp",
+    "bio": "Emiri Momota brings delicate Japanese elegance and refined sensuality."
+  },
+  "Emma Rosie": {
+    "image": "https://i.ibb.co/placeholder/emma-rosie.jpg",
+    "card": "https://i.ibb.co/placeholder/emma-rosie.jpg",
+    "hero": "https://i.ibb.co/placeholder/emma-rosie-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/emma-rosie-portrait.webp",
+    "bio": "Emma Rosie delights with youthful innocence and sparkling eyes."
+  },
   "Eva Elfie": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
-    bio: "Eva Elfie is one of the most recognizable faces in modern luxury entertainment, known for her radiant on-screen presence and effortlessly cinematic style.",
+    "image": "https://i.ibb.co/placeholder/eva-elfie.jpg",
+    "card": "https://i.ibb.co/placeholder/eva-elfie.jpg",
+    "hero": "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
+    "portrait": "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    "bio": "Eva Elfie is adored globally for her angelic beauty, perfect proportions, and charismatic performances."
   },
-
+  "Eva Generosi": {
+    "image": "https://i.ibb.co/placeholder/eva-generosi.jpg",
+    "card": "https://i.ibb.co/placeholder/eva-generosi.jpg",
+    "hero": "https://i.ibb.co/placeholder/eva-generosi-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/eva-generosi-portrait.webp",
+    "bio": "Eva Generosi offers sophisticated European allure and natural grace."
+  },
+  "Eve Sweet": {
+    "image": "https://i.ibb.co/placeholder/eve-sweet.jpg",
+    "card": "https://i.ibb.co/placeholder/eve-sweet.jpg",
+    "hero": "https://i.ibb.co/placeholder/eve-sweet-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/eve-sweet-portrait.webp",
+    "bio": "Eve Sweet tempts with sweet features and irresistible charm."
+  },
+  "Freya Parker": {
+    "image": "https://i.ibb.co/placeholder/freya-parker.jpg",
+    "card": "https://i.ibb.co/placeholder/freya-parker.jpg",
+    "hero": "https://i.ibb.co/placeholder/freya-parker-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/freya-parker-portrait.webp",
+    "bio": "Freya Parker impresses with tall, athletic beauty and strong presence."
+  },
+  "Gal Ritchie": {
+    "image": "https://i.ibb.co/placeholder/gal-ritchie.jpg",
+    "card": "https://i.ibb.co/placeholder/gal-ritchie.jpg",
+    "hero": "https://i.ibb.co/placeholder/gal-ritchie-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/gal-ritchie-portrait.webp",
+    "bio": "Gal Ritchie brings unique style and captivating screen energy."
+  },
+  "Gianna Dior": {
+    "image": "https://i.ibb.co/placeholder/gianna-dior.jpg",
+    "card": "https://i.ibb.co/placeholder/gianna-dior.jpg",
+    "hero": "https://i.ibb.co/placeholder/gianna-dior-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/gianna-dior-portrait.webp",
+    "bio": "Gianna Dior is a premium star known for flawless beauty and elite performances."
+  },
+  "Hailey Rose": {
+    "image": "https://i.ibb.co/placeholder/hailey-rose.jpg",
+    "card": "https://i.ibb.co/placeholder/hailey-rose.jpg",
+    "hero": "https://i.ibb.co/placeholder/hailey-rose-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/hailey-rose-portrait.webp",
+    "bio": "Hailey Rose blooms with fresh beauty and vibrant personality."
+  },
+  "Hazel Heart": {
+    "image": "https://i.ibb.co/placeholder/hazel-heart.jpg",
+    "card": "https://i.ibb.co/placeholder/hazel-heart.jpg",
+    "hero": "https://i.ibb.co/placeholder/hazel-heart-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/hazel-heart-portrait.webp",
+    "bio": "Hazel Heart warms hearts with gentle beauty and sincere performances."
+  },
+  "Hazel Moore": {
+    "image": "https://i.ibb.co/placeholder/hazel-moore.jpg",
+    "card": "https://i.ibb.co/placeholder/hazel-moore.jpg",
+    "hero": "https://i.ibb.co/placeholder/hazel-moore-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/hazel-moore-portrait.webp",
+    "bio": "Hazel Moore offers natural charm and endearing presence."
+  },
+  "Isa Bella": {
+    "image": "https://i.ibb.co/placeholder/isa-bella.jpg",
+    "card": "https://i.ibb.co/placeholder/isa-bella.jpg",
+    "hero": "https://i.ibb.co/placeholder/isa-bella-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/isa-bella-portrait.webp",
+    "bio": "Isa Bella enchants with exotic appeal and passionate delivery."
+  },
+  "Janice Griffith": {
+    "image": "https://i.ibb.co/placeholder/janice-griffith.jpg",
+    "card": "https://i.ibb.co/placeholder/janice-griffith.jpg",
+    "hero": "https://i.ibb.co/placeholder/janice-griffith-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/janice-griffith-portrait.webp",
+    "bio": "Janice Griffith is a petite powerhouse with infectious energy."
+  },
+  "Jasmine Sherni": {
+    "image": "https://i.ibb.co/placeholder/jasmine-sherni.jpg",
+    "card": "https://i.ibb.co/placeholder/jasmine-sherni.jpg",
+    "hero": "https://i.ibb.co/placeholder/jasmine-sherni-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/jasmine-sherni-portrait.webp",
+    "bio": "Jasmine Sherni brings fierce beauty and bold sensuality."
+  },
+  "Jazmin Luv": {
+    "image": "https://i.ibb.co/placeholder/jazmin-luv.jpg",
+    "card": "https://i.ibb.co/placeholder/jazmin-luv.jpg",
+    "hero": "https://i.ibb.co/placeholder/jazmin-luv-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/jazmin-luv-portrait.webp",
+    "bio": "Jazmin Luv radiates love and playful seduction."
+  },
+  "Jia Lissa": {
+    "image": "https://i.ibb.co/placeholder/jia-lissa.jpg",
+    "card": "https://i.ibb.co/placeholder/jia-lissa.jpg",
+    "hero": "https://i.ibb.co/placeholder/jia-lissa-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/jia-lissa-portrait.webp",
+    "bio": "Jia Lissa is renowned for her fiery red hair and stunning Eastern European features."
+  },
+  "Joanna Wei": {
+    "image": "https://i.ibb.co/placeholder/joanna-wei.jpg",
+    "card": "https://i.ibb.co/placeholder/joanna-wei.jpg",
+    "hero": "https://i.ibb.co/placeholder/joanna-wei-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/joanna-wei-portrait.webp",
+    "bio": "Joanna Wei captivates with refined Asian beauty and graceful style."
+  },
+  "Julia James": {
+    "image": "https://i.ibb.co/placeholder/julia-james.jpg",
+    "card": "https://i.ibb.co/placeholder/julia-james.jpg",
+    "hero": "https://i.ibb.co/placeholder/julia-james-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/julia-james-portrait.webp",
+    "bio": "Julia James delivers classic beauty and confident performances."
+  },
+  "Katana Kombat": {
+    "image": "https://i.ibb.co/placeholder/katana-kombat.jpg",
+    "card": "https://i.ibb.co/placeholder/katana-kombat.jpg",
+    "hero": "https://i.ibb.co/placeholder/katana-kombat-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/katana-kombat-portrait.webp",
+    "bio": "Katana Kombat fuses martial elegance with explosive sensuality."
+  },
+  "Katie Kush": {
+    "image": "https://i.ibb.co/placeholder/katie-kush.jpg",
+    "card": "https://i.ibb.co/placeholder/katie-kush.jpg",
+    "hero": "https://i.ibb.co/placeholder/katie-kush-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/katie-kush-portrait.webp",
+    "bio": "Katie Kush is known for flexibility, energy, and bright appeal."
+  },
+  "Kayley Gunner": {
+    "image": "https://i.ibb.co/placeholder/kayley-gunner.jpg",
+    "card": "https://i.ibb.co/placeholder/kayley-gunner.jpg",
+    "hero": "https://i.ibb.co/placeholder/kayley-gunner-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/kayley-gunner-portrait.webp",
+    "bio": "Kayley Gunner offers military-precision beauty and commanding presence."
+  },
+  "Kelly Collins": {
+    "image": "https://i.ibb.co/placeholder/kelly-collins.jpg",
+    "card": "https://i.ibb.co/placeholder/kelly-collins.jpg",
+    "hero": "https://i.ibb.co/placeholder/kelly-collins-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/kelly-collins-portrait.webp",
+    "bio": "Kelly Collins shines with elegant European features."
+  },
+  "Kendra Spade": {
+    "image": "https://i.ibb.co/placeholder/kendra-spade.jpg",
+    "card": "https://i.ibb.co/placeholder/kendra-spade.jpg",
+    "hero": "https://i.ibb.co/placeholder/kendra-spade-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/kendra-spade-portrait.webp",
+    "bio": "Kendra Spade brings exotic Asian-American beauty and intense passion."
+  },
+  "Kimmy Kimm": {
+    "image": "https://i.ibb.co/placeholder/kimmy-kimm.jpg",
+    "card": "https://i.ibb.co/placeholder/kimmy-kimm.jpg",
+    "hero": "https://i.ibb.co/placeholder/kimmy-kimm-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/kimmy-kimm-portrait.webp",
+    "bio": "Kimmy Kimm delights with petite charm and vibrant personality."
+  },
+  "Kwini": {
+    "image": "https://i.ibb.co/placeholder/kwini.jpg",
+    "card": "https://i.ibb.co/placeholder/kwini.jpg",
+    "hero": "https://i.ibb.co/placeholder/kwini-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/kwini-portrait.webp",
+    "bio": "Kwini stands out with unique beauty and magnetic appeal."
+  },
+  "Kylie Rocket": {
+    "image": "https://i.ibb.co/placeholder/kylie-rocket.jpg",
+    "card": "https://i.ibb.co/placeholder/kylie-rocket.jpg",
+    "hero": "https://i.ibb.co/placeholder/kylie-rocket-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/kylie-rocket-portrait.webp",
+    "bio": "Kylie Rocket soars with youthful energy and stunning visuals."
+  },
+  "Lana Rhoades": {
+    "image": "https://i.ibb.co/placeholder/lana-rhoades.jpg",
+    "card": "https://i.ibb.co/placeholder/lana-rhoades.jpg",
+    "hero": "https://i.ibb.co/placeholder/lana-rhoades-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lana-rhoades-portrait.webp",
+    "bio": "Lana Rhoades is an icon of modern adult entertainment with unparalleled beauty and star power."
+  },
+  "Lana Smalls": {
+    "image": "https://i.ibb.co/placeholder/lana-smalls.jpg",
+    "card": "https://i.ibb.co/placeholder/lana-smalls.jpg",
+    "hero": "https://i.ibb.co/placeholder/lana-smalls-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lana-smalls-portrait.webp",
+    "bio": "Lana Smalls offers compact perfection and endless charm."
+  },
+  "Leana Lovings": {
+    "image": "https://i.ibb.co/placeholder/leana-lovings.jpg",
+    "card": "https://i.ibb.co/placeholder/leana-lovings.jpg",
+    "hero": "https://i.ibb.co/placeholder/leana-lovings-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/leana-lovings-portrait.webp",
+    "bio": "Leana Lovings wins hearts with genuine warmth and beauty."
+  },
+  "Lexi Lore": {
+    "image": "https://i.ibb.co/placeholder/lexi-lore.jpg",
+    "card": "https://i.ibb.co/placeholder/lexi-lore.jpg",
+    "hero": "https://i.ibb.co/placeholder/lexi-lore-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lexi-lore-portrait.webp",
+    "bio": "Lexi Lore captivates with pale beauty and intense performances."
+  },
+  "Lexi Luna": {
+    "image": "https://i.ibb.co/placeholder/lexi-luna.jpg",
+    "card": "https://i.ibb.co/placeholder/lexi-luna.jpg",
+    "hero": "https://i.ibb.co/placeholder/lexi-luna-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lexi-luna-portrait.webp",
+    "bio": "Lexi Luna brings mature sophistication and voluptuous appeal."
+  },
+  "Lexi Smith": {
+    "image": "https://i.ibb.co/placeholder/lexi-smith.jpg",
+    "card": "https://i.ibb.co/placeholder/lexi-smith.jpg",
+    "hero": "https://i.ibb.co/placeholder/lexi-smith-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lexi-smith-portrait.webp",
+    "bio": "Lexi Smith offers classic American beauty and approachable charm."
+  },
+  "Lia Lin": {
+    "image": "https://i.ibb.co/placeholder/lia-lin.jpg",
+    "card": "https://i.ibb.co/placeholder/lia-lin.jpg",
+    "hero": "https://i.ibb.co/placeholder/lia-lin-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lia-lin-portrait.webp",
+    "bio": "Lia Lin enchants with elegant Asian features and sensual grace."
+  },
+  "Lilly Bell": {
+    "image": "https://i.ibb.co/placeholder/lilly-bell.jpg",
+    "card": "https://i.ibb.co/placeholder/lilly-bell.jpg",
+    "hero": "https://i.ibb.co/placeholder/lilly-bell-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lilly-bell-portrait.webp",
+    "bio": "Lilly Bell rings with fresh, natural beauty and sweet demeanor."
+  },
+  "Little Angel": {
+    "image": "https://i.ibb.co/placeholder/little-angel.jpg",
+    "card": "https://i.ibb.co/placeholder/little-angel.jpg",
+    "hero": "https://i.ibb.co/placeholder/little-angel-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/little-angel-portrait.webp",
+    "bio": "Little Angel embodies delicate innocence and heavenly appeal."
+  },
+  "Little Caprice": {
+    "image": "https://i.ibb.co/placeholder/little-caprice.jpg",
+    "card": "https://i.ibb.co/placeholder/little-caprice.jpg",
+    "hero": "https://i.ibb.co/placeholder/little-caprice-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/little-caprice-portrait.webp",
+    "bio": "Little Caprice is a European icon known for elegance and passion."
+  },
+  "Liya Silver": {
+    "image": "https://i.ibb.co/placeholder/liya-silver.jpg",
+    "card": "https://i.ibb.co/placeholder/liya-silver.jpg",
+    "hero": "https://i.ibb.co/placeholder/liya-silver-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/liya-silver-portrait.webp",
+    "bio": "Liya Silver impresses with striking beauty and powerful presence."
+  },
+  "Liz Jordan": {
+    "image": "https://i.ibb.co/placeholder/liz-jordan.jpg",
+    "card": "https://i.ibb.co/placeholder/liz-jordan.jpg",
+    "hero": "https://i.ibb.co/placeholder/liz-jordan-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/liz-jordan-portrait.webp",
+    "bio": "Liz Jordan offers fresh appeal and energetic performances."
+  },
+  "Lucy Mochi": {
+    "image": "https://i.ibb.co/placeholder/lucy-mochi.jpg",
+    "card": "https://i.ibb.co/placeholder/lucy-mochi.jpg",
+    "hero": "https://i.ibb.co/placeholder/lucy-mochi-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lucy-mochi-portrait.webp",
+    "bio": "Lucy Mochi brings sweet Asian charm and delightful presence."
+  },
+  "Lulu Chu": {
+    "image": "https://i.ibb.co/placeholder/lulu-chu.jpg",
+    "card": "https://i.ibb.co/placeholder/lulu-chu.jpg",
+    "hero": "https://i.ibb.co/placeholder/lulu-chu-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/lulu-chu-portrait.webp",
+    "bio": "Lulu Chu is beloved for her tiny frame and massive on-screen impact."
+  },
+  "Matty Mila Perez": {
+    "image": "https://i.ibb.co/placeholder/matty-mila-perez.jpg",
+    "card": "https://i.ibb.co/placeholder/matty-mila-perez.jpg",
+    "hero": "https://i.ibb.co/placeholder/matty-mila-perez-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/matty-mila-perez-portrait.webp",
+    "bio": "Matty Mila Perez radiates Latin fire and vibrant beauty."
+  },
+  "Megan Longoria": {
+    "image": "https://i.ibb.co/placeholder/megan-longoria.jpg",
+    "card": "https://i.ibb.co/placeholder/megan-longoria.jpg",
+    "hero": "https://i.ibb.co/placeholder/megan-longoria-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/megan-longoria-portrait.webp",
+    "bio": "Megan Longoria offers tall, statuesque beauty."
+  },
+  "Megan Mistakes": {
+    "image": "https://i.ibb.co/placeholder/megan-mistakes.jpg",
+    "card": "https://i.ibb.co/placeholder/megan-mistakes.jpg",
+    "hero": "https://i.ibb.co/placeholder/megan-mistakes-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/megan-mistakes-portrait.webp",
+    "bio": "Megan Mistakes brings fun, adventurous energy."
+  },
+  "Melanie Marie": {
+    "image": "https://i.ibb.co/placeholder/melanie-marie.jpg",
+    "card": "https://i.ibb.co/placeholder/melanie-marie.jpg",
+    "hero": "https://i.ibb.co/placeholder/melanie-marie-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/melanie-marie-portrait.webp",
+    "bio": "Melanie Marie shines with warm, inviting beauty."
+  },
+  "Millie Morgan": {
+    "image": "https://i.ibb.co/placeholder/millie-morgan.jpg",
+    "card": "https://i.ibb.co/placeholder/millie-morgan.jpg",
+    "hero": "https://i.ibb.co/placeholder/millie-morgan-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/millie-morgan-portrait.webp",
+    "bio": "Millie Morgan delivers classic appeal and strong performances."
+  },
+  "Molly Little": {
+    "image": "https://i.ibb.co/placeholder/molly-little.jpg",
+    "card": "https://i.ibb.co/placeholder/molly-little.jpg",
+    "hero": "https://i.ibb.co/placeholder/molly-little-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/molly-little-portrait.webp",
+    "bio": "Molly Little charms with petite sweetness and big talent."
+  },
+  "Nikki Nicole": {
+    "image": "https://i.ibb.co/placeholder/nikki-nicole.jpg",
+    "card": "https://i.ibb.co/placeholder/nikki-nicole.jpg",
+    "hero": "https://i.ibb.co/placeholder/nikki-nicole-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/nikki-nicole-portrait.webp",
+    "bio": "Nikki Nicole stands out with bold curves and confident style."
+  },
+  "Octavia Red": {
+    "image": "https://i.ibb.co/placeholder/octavia-red.jpg",
+    "card": "https://i.ibb.co/placeholder/octavia-red.jpg",
+    "hero": "https://i.ibb.co/placeholder/octavia-red-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/octavia-red-portrait.webp",
+    "bio": "Octavia Red ignites with fiery red hair and passionate energy."
+  },
+  "Queenie Sateen": {
+    "image": "https://i.ibb.co/placeholder/queenie-sateen.jpg",
+    "card": "https://i.ibb.co/placeholder/queenie-sateen.jpg",
+    "hero": "https://i.ibb.co/placeholder/queenie-sateen-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/queenie-sateen-portrait.webp",
+    "bio": "Queenie Sateen reigns with glamorous, queen-like presence."
+  },
   "Rae Lil Black": {
-    image: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
-    card: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
-    hero: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
-    portrait: "https://i.ibb.co/0pWByx46/rae-lil-black-3840x1600.webp",
-    bio: "Bold, magnetic and unforgettable, Rae Lil Black brings a rare blend of confidence and editorial-grade style to every frame.",
+    "image": "https://i.ibb.co/placeholder/rae-lil-black.jpg",
+    "card": "https://i.ibb.co/placeholder/rae-lil-black.jpg",
+    "hero": "https://i.ibb.co/placeholder/rae-lil-black-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/rae-lil-black-portrait.webp",
+    "bio": "Rae Lil Black blends cute and seductive with perfect precision."
   },
-
+  "Reina Ohara": {
+    "image": "https://i.ibb.co/placeholder/reina-ohara.jpg",
+    "card": "https://i.ibb.co/placeholder/reina-ohara.jpg",
+    "hero": "https://i.ibb.co/placeholder/reina-ohara-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/reina-ohara-portrait.webp",
+    "bio": "Reina Ohara offers elegant Japanese beauty."
+  },
   "Rikako Katayama": {
-    image: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    card: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    hero: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    portrait: "https://i.ibb.co/ZzSncRxc/rikako-katayama-1900x1300.webp",
-    bio: "An icon of Eastern glamour, Rikako Katayama blends grace, mystery and high-fashion sophistication.",
+    "image": "https://i.ibb.co/placeholder/rikako-katayama.jpg",
+    "card": "https://i.ibb.co/placeholder/rikako-katayama.jpg",
+    "hero": "https://i.ibb.co/placeholder/rikako-katayama-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/rikako-katayama-portrait.webp",
+    "bio": "Rikako Katayama brings refined Japanese artistry."
   },
-};
+  "Riley Reid": {
+    "image": "https://i.ibb.co/placeholder/riley-reid.jpg",
+    "card": "https://i.ibb.co/placeholder/riley-reid.jpg",
+    "hero": "https://i.ibb.co/placeholder/riley-reid-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/riley-reid-portrait.webp",
+    "bio": "Riley Reid is a global superstar known for boundless energy and iconic status."
+  },
+  "Rissa May": {
+    "image": "https://i.ibb.co/placeholder/rissa-may.jpg",
+    "card": "https://i.ibb.co/placeholder/rissa-may.jpg",
+    "hero": "https://i.ibb.co/placeholder/rissa-may-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/rissa-may-portrait.webp",
+    "bio": "Rissa May captivates with fresh, natural beauty."
+  },
+  "Ryan Reid": {
+    "image": "https://i.ibb.co/placeholder/ryan-reid.jpg",
+    "card": "https://i.ibb.co/placeholder/ryan-reid.jpg",
+    "hero": "https://i.ibb.co/placeholder/ryan-reid-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/ryan-reid-portrait.webp",
+    "bio": "Ryan Reid delivers bold, confident performances."
+  },
+  "Scarlett Alexis": {
+    "image": "https://i.ibb.co/placeholder/scarlett-alexis.jpg",
+    "card": "https://i.ibb.co/placeholder/scarlett-alexis.jpg",
+    "hero": "https://i.ibb.co/placeholder/scarlett-alexis-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/scarlett-alexis-portrait.webp",
+    "bio": "Scarlett Alexis blends classic beauty with modern edge."
+  },
+  "Scarlett Jones": {
+    "image": "https://i.ibb.co/placeholder/scarlett-jones.jpg",
+    "card": "https://i.ibb.co/placeholder/scarlett-jones.jpg",
+    "hero": "https://i.ibb.co/placeholder/scarlett-jones-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/scarlett-jones-portrait.webp",
+    "bio": "Scarlett Jones impresses with striking features and presence."
+  },
+  "Scarlit Scandal": {
+    "image": "https://i.ibb.co/placeholder/scarlit-scandal.jpg",
+    "card": "https://i.ibb.co/placeholder/scarlit-scandal.jpg",
+    "hero": "https://i.ibb.co/placeholder/scarlit-scandal-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/scarlit-scandal-portrait.webp",
+    "bio": "Scarlit Scandal creates headlines with bold beauty and talent."
+  },
+  "Shay Sights": {
+    "image": "https://i.ibb.co/placeholder/shay-sights.jpg",
+    "card": "https://i.ibb.co/placeholder/shay-sights.jpg",
+    "hero": "https://i.ibb.co/placeholder/shay-sights-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/shay-sights-portrait.webp",
+    "bio": "Shay Sights offers mature, sophisticated appeal."
+  },
+  "Shelena": {
+    "image": "https://i.ibb.co/placeholder/shelena.jpg",
+    "card": "https://i.ibb.co/placeholder/shelena.jpg",
+    "hero": "https://i.ibb.co/placeholder/shelena-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/shelena-portrait.webp",
+    "bio": "Shelena captivates with unique, exotic beauty."
+  },
+  "Sirena Milano": {
+    "image": "https://i.ibb.co/placeholder/sirena-milano.jpg",
+    "card": "https://i.ibb.co/placeholder/sirena-milano.jpg",
+    "hero": "https://i.ibb.co/placeholder/sirena-milano-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/sirena-milano-portrait.webp",
+    "bio": "Sirena Milano sings with seductive Italian charm."
+  },
+  "Sonya Blaze": {
+    "image": "https://i.ibb.co/placeholder/sonya-blaze.jpg",
+    "card": "https://i.ibb.co/placeholder/sonya-blaze.jpg",
+    "hero": "https://i.ibb.co/placeholder/sonya-blaze-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/sonya-blaze-portrait.webp",
+    "bio": "Sonya Blaze sets the screen on fire with passionate intensity."
+  },
+  "Stefany Kyler": {
+    "image": "https://i.ibb.co/placeholder/stefany-kyler.jpg",
+    "card": "https://i.ibb.co/placeholder/stefany-kyler.jpg",
+    "hero": "https://i.ibb.co/placeholder/stefany-kyler-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/stefany-kyler-portrait.webp",
+    "bio": "Stefany Kyler offers sweet, youthful European beauty."
+  },
+  "Stella Luxx": {
+    "image": "https://i.ibb.co/placeholder/stella-luxx.jpg",
+    "card": "https://i.ibb.co/placeholder/stella-luxx.jpg",
+    "hero": "https://i.ibb.co/placeholder/stella-luxx-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/stella-luxx-portrait.webp",
+    "bio": "Stella Luxx glows with luxurious appeal and star quality."
+  },
+  "Sybil": {
+    "image": "https://i.ibb.co/placeholder/sybil.jpg",
+    "card": "https://i.ibb.co/placeholder/sybil.jpg",
+    "hero": "https://i.ibb.co/placeholder/sybil-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/sybil-portrait.webp",
+    "bio": "Sybil enchants with elegant Eastern European sophistication."
+  },
+  "Tori Black": {
+    "image": "https://i.ibb.co/placeholder/tori-black.jpg",
+    "card": "https://i.ibb.co/placeholder/tori-black.jpg",
+    "hero": "https://i.ibb.co/placeholder/tori-black-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/tori-black-portrait.webp",
+    "bio": "Tori Black is a legendary performer with timeless beauty and unmatched skill."
+  },
+  "Valentina Nappi": {
+    "image": "https://i.ibb.co/placeholder/valentina-nappi.jpg",
+    "card": "https://i.ibb.co/placeholder/valentina-nappi.jpg",
+    "hero": "https://i.ibb.co/placeholder/valentina-nappi-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/valentina-nappi-portrait.webp",
+    "bio": "Valentina Nappi represents Italian perfection with incredible natural beauty."
+  },
+  "Vanessa Alessia": {
+    "image": "https://i.ibb.co/placeholder/vanessa-alessia.jpg",
+    "card": "https://i.ibb.co/placeholder/vanessa-alessia.jpg",
+    "hero": "https://i.ibb.co/placeholder/vanessa-alessia-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/vanessa-alessia-portrait.webp",
+    "bio": "Vanessa Alessia brings warm, inviting sensuality."
+  },
+  "Vanna Bardot": {
+    "image": "https://i.ibb.co/placeholder/vanna-bardot.jpg",
+    "card": "https://i.ibb.co/placeholder/vanna-bardot.jpg",
+    "hero": "https://i.ibb.co/placeholder/vanna-bardot-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/vanna-bardot-portrait.webp",
+    "bio": "Vanna Bardot dazzles with delicate features and artistic performances."
+  },
+  "Venus Valencia": {
+    "image": "https://i.ibb.co/placeholder/venus-valencia.jpg",
+    "card": "https://i.ibb.co/placeholder/venus-valencia.jpg",
+    "hero": "https://i.ibb.co/placeholder/venus-valencia-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/venus-valencia-portrait.webp",
+    "bio": "Venus Valencia radiates divine beauty and passion."
+  },
+  "Violet Gems": {
+    "image": "https://i.ibb.co/placeholder/violet-gems.jpg",
+    "card": "https://i.ibb.co/placeholder/violet-gems.jpg",
+    "hero": "https://i.ibb.co/placeholder/violet-gems-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/violet-gems-portrait.webp",
+    "bio": "Violet Gems sparkles with precious, rare beauty."
+  },
+  "Violet Myers": {
+    "image": "https://i.ibb.co/placeholder/violet-myers.jpg",
+    "card": "https://i.ibb.co/placeholder/violet-myers.jpg",
+    "hero": "https://i.ibb.co/placeholder/violet-myers-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/violet-myers-portrait.webp",
+    "bio": "Violet Myers is celebrated for her incredible curves and magnetic personality."
+  },
+  "XxLayna Marie": {
+    "image": "https://i.ibb.co/placeholder/xxlayna-marie.jpg",
+    "card": "https://i.ibb.co/placeholder/xxlayna-marie.jpg",
+    "hero": "https://i.ibb.co/placeholder/xxlayna-marie-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/xxlayna-marie-portrait.webp",
+    "bio": "XxLayna Marie offers petite perfection and explosive energy."
+  },
+  "Yhivi": {
+    "image": "https://i.ibb.co/placeholder/yhivi.jpg",
+    "card": "https://i.ibb.co/placeholder/yhivi.jpg",
+    "hero": "https://i.ibb.co/placeholder/yhivi-hero.webp",
+    "portrait": "https://i.ibb.co/placeholder/yhivi-portrait.webp",
+    "bio": "Yhivi stands out with unique style and artistic expression."
+  }
+}
 
 export function getModelProfile(name: string): ModelProfile {
   const fallback = `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(name)}&backgroundColor=111111&textColor=ffffff`;
