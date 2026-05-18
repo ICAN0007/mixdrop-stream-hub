@@ -116,7 +116,7 @@ export const videos: Video[] = [
   categories: ["Fashion"],
   tags: ["#Fashion", "#Glamour", "#Premium"],
   src: "//mxdrop.sx/e/9w1qxqews0j398",
-  thumb: "https://i.ibb.co/Kcf5HMYJ/Crazy-Rae-Handles-Two.webp",
+  thumb: "https://i.ibb.co/jPHWzvTK/Naughty-Beauty-Rae-Sed-Man.webp",
   duration: "900",
   addedAt: "2026-04-08T14:00:00Z",
   model: "Rae Lil Black"
@@ -138,7 +138,7 @@ export const videos: Video[] = [
   categories: ["Glamour"],
   tags: ["#Glamour", "#Style", "#Premium"],
   src: "//mxdrop.sx/e/gj0kd09pcjzkp8",
-  thumb: "https://i.ibb.co/bM8nVmMD/Perfect-Rae-Cant.webpp",
+  thumb: "https://i.ibb.co/R4P3P4RG/Wild-Temptation.webp",
   duration: "1200",
   addedAt: "2026-04-08T15:00:00Z",
   model: "Rae Lil Black"
