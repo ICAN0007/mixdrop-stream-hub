@@ -287,10 +287,10 @@ export const modelProfiles: Record<string, ModelProfile> = {
   },
 
   "Adria Rae": {
-    image: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    card: "https://i.ibb.co/HW1S0CL/117849024.jpg",
-    hero: "https://i.ibb.co/N2cS6H19/vixen-eva-elfie-3840x1600.webp",
-    portrait: "https://i.ibb.co/fd0gR6K0/vixen-eva-elfie-1900x1300.webp",
+    image: "https://files.catbox.moe/hdj3bc.png",
+    card: "https://files.catbox.moe/hdj3bc.png",
+    hero: "https://i.ibb.co/jPDrmhTM/blacked-aria-lee-3840x1600.webp",
+    portrait: "https://i.ibb.co/KpGxkRBd/blacked-aria-lee-1900x1300.webp",
     bio: "Adria Rae blends elegance, charm and premium visual aesthetics into a polished high-fashion inspired identity.",
   },
 
