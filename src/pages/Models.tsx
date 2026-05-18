@@ -1,17 +1,34 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { videos, modelCodes, getModelProfile, slugifyModel, getVideoModels } from "@/lib/videos";
-import { Search, User } from "lucide-react";
+import { Search, User, ChevronLeft, ChevronRight } from "lucide-react";
 import PixelAtmosphere from "@/components/PixelAtmosphere";
+
+const PAGE_SIZE = 18; // 6 cols × 3 rows
 
 const Models = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [page, setPage] = useState(1);
 
   const filteredModels = useMemo(() => {
     if (!searchQuery.trim()) return modelCodes;
     const q = searchQuery.toLowerCase();
     return modelCodes.filter((m) => m.toLowerCase().includes(q));
   }, [searchQuery]);
+
+  useEffect(() => { setPage(1); }, [searchQuery]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredModels.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const pagedModels = filteredModels.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+
+  const goTo = (p: number) => {
+    setPage(Math.min(Math.max(1, p), totalPages));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const modelVideoCount = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -73,9 +90,20 @@ const Models = () => {
             </div>
           </div>
 
-          {/* Premium portrait grid: 6 cols desktop, 3 tablet, 2 mobile */}
+          {filteredModels.length === 0 ? (
+            <div className="py-24 text-center">
+              <p className="text-white/70 text-lg font-medium" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                No matching performers found
+              </p>
+              <p className="text-white/40 text-sm mt-2">
+                We couldn't find anything for "{searchQuery}". Try a different name.
+              </p>
+            </div>
+          ) : (
+          <>
+          {/* Premium portrait grid: exactly 6 × 3 = 18 per page */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
-            {filteredModels.map((model, idx) => {
+            {pagedModels.map((model, idx) => {
               const profile = getModelProfile(model);
               const count = modelVideoCount[model] || 0;
               return (
@@ -117,6 +145,41 @@ const Models = () => {
               );
             })}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="mt-12 flex items-center justify-center gap-2">
+              <button
+                onClick={() => goTo(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="flex items-center gap-1 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/80 hover:bg-primary/20 hover:border-primary/50 hover:text-white disabled:opacity-30 disabled:hover:bg-white/5 disabled:hover:border-white/10 transition-all"
+              >
+                <ChevronLeft className="h-4 w-4" /> Prev
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                <button
+                  key={p}
+                  onClick={() => goTo(p)}
+                  className={`min-w-[40px] h-10 rounded-lg text-sm font-bold tracking-wide transition-all ${
+                    p === currentPage
+                      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/40"
+                      : "bg-white/5 border border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                  }`}
+                >
+                  {p.toString().padStart(2, "0")}
+                </button>
+              ))}
+              <button
+                onClick={() => goTo(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="flex items-center gap-1 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/80 hover:bg-primary/20 hover:border-primary/50 hover:text-white disabled:opacity-30 disabled:hover:bg-white/5 disabled:hover:border-white/10 transition-all"
+              >
+                Next <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          )}
+          </>
+          )}
         </div>
 
         <footer className="border-t border-white/5 px-6 py-6 mt-8 backdrop-blur-md bg-black/30">
