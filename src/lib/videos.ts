@@ -28,7 +28,7 @@ export const videos: Video[] = [
     categories: ["Fashion"],
     tags: ["#Fashion", "#Glamour", "#Premium"],
     src: "//mixdrop.top/e/4dmqowvzfq3j9x4",
-    thumb: "https://i.ibb.co/nszKz1KC/Fk-Me-Until-You-Fill-Me.jpg",
+    thumb: "https://i.ibb.co/tT9PLsYx/Sx-Sells-Eliza-Ibarra-Mick-Blue.webp",
     duration: "1920",
     addedAt: "2026-04-08T10:00:00Z",
     model: "Eliza Ibarra"
