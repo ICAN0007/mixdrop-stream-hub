@@ -172,10 +172,21 @@ export const videos: Video[] = [
   tags: ["#Glamour", "#Luxury", "#Trending"],
   src: "https://mxdrop.sx/e/ow4w3gzoim8rzo",
   thumb: "https://i.ibb.co/7N8c46w5/Green-Eyed-Monster.webp",
-  duration: "600",
+  duration: "2700",
   addedAt: "2026-05-015T15:30:00Z",
   model: "Rae Lil Black"
-}  
+},
+{
+  id: "V15",
+  title: "Knockout Bab Fk Two Cops On Duty-->",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Luxury", "#Trending"],
+  src: "https://mxdrop.sx/e/mk14136ziklodw",
+  thumb: "https://i.ibb.co/kgnG0PYw/blackedraw-knockout-fk-two-cops-on-duty-3840x2160.webp",
+  duration: "3000",
+  addedAt: "2026-05-015T15:30:00Z",
+  model: "Agatha Vega, Ella Hughes"
+} 
 ];
 
 export const categories = [
