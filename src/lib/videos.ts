@@ -83,7 +83,7 @@ export const videos: Video[] = [
   categories: ["Lifestyle"],
   tags: ["#Lifestyle", "#Luxury", "#Trending"],
   src: "//mxdrop.sx/e/gj0kdkqwaed3g7",
-  thumb: "https://i.ibb.co/C31CxZ8P/24-Hours-Part-2.webp",
+  thumb: "https://i.ibb.co/N6K0dtWt/24-Hours-Part-3.webp",
   duration: "1200",
   addedAt: "2026-04-08T12:30:00Z",
   model: "Rae Lil Black"
@@ -322,6 +322,7 @@ export const modelCodes = [
   "Hazel Heart",
   "Hazel Moore",
   "Isa Bella",
+  "Jadilica",
   "Janice Griffith",
   "Jasmine Sherni",
   "Jazmin Luv",
@@ -549,10 +550,10 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "bio": "Azul Hermosa radiates vibrant Latin energy and breathtaking curves.",
   },
   "Bailey Base": {
-    "image": "https://i.ibb.co/placeholder/bailey-base.jpg",
-    "card": "https://i.ibb.co/placeholder/bailey-base.jpg",
-    "hero": "https://i.ibb.co/placeholder/bailey-base-hero.webp",
-    "portrait": "https://i.ibb.co/placeholder/bailey-base-portrait.webp",
+    "image": "https://i.ibb.co/4w4gD4NJ/wmremove-transformed1.jpg",
+    "card": "https://i.ibb.co/4w4gD4NJ/wmremove-transformed1.jpg",
+    "hero": "https://i.ibb.co/yn4XSWSx/wmremove-transformed.jpg",
+    "portrait": "https://i.ibb.co/v4Tx2wrm/wmremove-transformed-1.jpg",
     "bio": "Bailey Base delivers fresh, youthful appeal with undeniable star quality.",
   },
   "Barbie Feels": {
@@ -640,10 +641,10 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "bio": "Coco Lovelock is adored for her petite frame and bubbly personality.",
   },
   "Codi Vore": {
-    "image": "https://i.ibb.co/placeholder/codi-vore.jpg",
-    "card": "https://i.ibb.co/placeholder/codi-vore.jpg",
-    "hero": "https://i.ibb.co/placeholder/codi-vore-hero.webp",
-    "portrait": "https://i.ibb.co/placeholder/codi-vore-portrait.webp",
+    "image": "https://i.ibb.co/B5BmzzGs/s1-profile-001.jpg",
+    "card": "https://i.ibb.co/B5BmzzGs/s1-profile-001.jpg",
+    "hero": "https://i.ibb.co/rRNpmMw2/Late-f.jpg",
+    "portrait": "https://i.ibb.co/LhtSjDny/wmremove-transformed.jpg",
     "bio": "Codi Vore is known for her voluptuous figure and warm, inviting presence.",
   },
   "Dana Vespoli": {
@@ -813,6 +814,13 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "hero": "https://i.ibb.co/849MncK6/vixen-isa-bella-1920x800.webp",
     "portrait": "https://i.ibb.co/SDCVT0fs/vixen-isa-bella-950x650.webp",
     "bio": "Isa Bella enchants with exotic appeal and passionate delivery.",
+  },
+  "Jadilica": {
+    "image": "https://i.ibb.co/R468X6Cj/Jadilica-2.png",
+    "card": "https://i.ibb.co/R468X6Cj/Jadilica-2.png",
+    "hero": "https://i.ibb.co/rRsvK60D/tushy-jadilica-3840x1600.webp",
+    "portrait": "https://i.ibb.co/7TNYTDD/tushy-jadilica-1900x1300.webp",
+    "bio": "Jadilica enchants with exotic appeal and passionate delivery.",
   },
   "Janice Griffith": {
     "image": "https://i.ibb.co/jPb1PG8j/Janice-Griffith.png",
@@ -1221,10 +1229,10 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "bio": "Venus Valencia radiates divine beauty and passion.",
   },
   "Violet Gems": {
-    "image": "https://i.ibb.co/placeholder/violet-gems.jpg",
-    "card": "https://i.ibb.co/placeholder/violet-gems.jpg",
-    "hero": "https://i.ibb.co/placeholder/violet-gems-hero.webp",
-    "portrait": "https://i.ibb.co/placeholder/violet-gems-portrait.webp",
+    "image": "https://i.ibb.co/RGd56m2M/47651670-002-5b3d.jpg",
+    "card": "https://i.ibb.co/RGd56m2M/47651670-002-5b3d.jpg",
+    "hero": "https://i.ibb.co/sJQJVcbP/wmremove-transformed-2.jpg",
+    "portrait": "https://i.ibb.co/RTW5rBL1/wmremove-transformed.jpg",
     "bio": "Violet Gems sparkles with precious, rare beauty.",
   },
   "Violet Myers": {
