@@ -219,7 +219,7 @@ export const videos: Video[] = [
   duration: "600",
   addedAt: "2026-05-019T15:30:00Z",
   model: "Kwini Kim"
-}.
+},
 {
   id: "V20",
   title: "Taking a morning bath with a cute aked girl",
