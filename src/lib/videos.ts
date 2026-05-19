@@ -4,7 +4,7 @@ export interface Video {
   categories: string[];
   tags: string[];
   src: string;
-  thumb: string;abe
+  thumb: string;
   duration: string;
   addedAt: string;
   model: string;
