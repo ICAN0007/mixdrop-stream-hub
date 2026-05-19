@@ -208,7 +208,29 @@ export const videos: Video[] = [
   duration: "600",
   addedAt: "2026-05-018T15:30:00Z",
   model: "Emiri Momota"
-}
+},
+{
+  id: "V19",
+  title: "Three girls were amazed when they heard about the owner of the biggest cck",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Luxury", "#Trending"],
+  src: "https://video.damplips.com/video7/655/01.mp4",
+  thumb: "https://i.ibb.co/LdXYSRZd/three-girls.jpg",
+  duration: "600",
+  addedAt: "2026-05-019T15:30:00Z",
+  model: "Kwini Kim"
+}.
+{
+  id: "V20",
+  title: "Taking a morning bath with a cute aked girl",
+  categories: ["Glamour"],
+  tags: ["#Glamour", "#Luxury", "#Trending"],
+  src: "https://video.damplips.com/video7/710/22.mp4",
+  thumb: "https://i.ibb.co/d0sFkhng/bath-girl.jpg",
+  duration: "600",
+  addedAt: "2026-05-019T15:30:00Z",
+  model: "Kwini Kim"
+}  
 ];
 
 export const categories = [
@@ -312,7 +334,7 @@ export const modelCodes = [
   "Kelly Collins",
   "Kendra Spade",
   "Kimmy Kimm",
-  "Kwini",
+  "Kwini Kim",
   "Kylie Rocket",
   "Lana Rhoades",
   "Lana Smalls",
@@ -876,12 +898,12 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "portrait": "https://i.ibb.co/HTnxgfGW/deeper-kimmy-kimm-1900x1300.webp",
     "bio": "Kimmy Kimm delights with petite charm and vibrant personality.",
   },
-  "Kwini": {
+  "Kwini Kim": {
     "image": "https://i.ibb.co/QF1xmRvq/Kwini.png",
     "card": "https://i.ibb.co/QF1xmRvq/Kwini.png",
     "hero": "https://i.ibb.co/1frs7DL6/tushy-kwini-3840x1600.webp",
     "portrait": "https://i.ibb.co/V0BpR1PM/tushy-kwini-1900x1300.webp",
-    "bio": "Kwini stands out with unique beauty and magnetic appeal.",
+    "bio": "Kwini Kim stands out with unique beauty and magnetic appeal.",
   },
   "Kylie Rocket": {
     "image": "https://i.ibb.co/5gYVYTvf/Kylie-Rocket.png",
