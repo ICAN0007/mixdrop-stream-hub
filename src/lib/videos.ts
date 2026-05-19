@@ -550,8 +550,8 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "bio": "Azul Hermosa radiates vibrant Latin energy and breathtaking curves.",
   },
   "Bailey Base": {
-    "image": "https://i.ibb.co/4w4gD4NJ/wmremove-transformed1.jpg",
-    "card": "https://i.ibb.co/4w4gD4NJ/wmremove-transformed1.jpg",
+    "image": "https://i.ibb.co/fdhpmyVX/3.webp",
+    "card": "https://i.ibb.co/fdhpmyVX/3.webp",
     "hero": "https://i.ibb.co/yn4XSWSx/wmremove-transformed.jpg",
     "portrait": "https://i.ibb.co/v4Tx2wrm/wmremove-transformed-1.jpg",
     "bio": "Bailey Base delivers fresh, youthful appeal with undeniable star quality.",
