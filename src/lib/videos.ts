@@ -214,7 +214,7 @@ export const videos: Video[] = [
   title: "Three girls were amazed when they heard about the owner of the biggest cck",
   categories: ["Glamour"],
   tags: ["#Glamour", "#Luxury", "#Trending"],
-  src: "https://video.damplips.com/video7/655/01.mp4",
+  src: "https://video.damplips.com/video7/713/35.mp4",
   thumb: "https://i.ibb.co/LdXYSRZd/three-girls.jpg",
   duration: "600",
   addedAt: "2026-05-019T15:30:00Z",
